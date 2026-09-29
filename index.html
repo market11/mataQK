@@ -48,16 +48,27 @@
             align-items: center;
         }
 
-        .logo { display: flex; align-items: center; gap: 10px; }
-        .logo-icon {
-            width: 45px; height: 45px;
-            background: var(--blanco);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.5rem;
+        .logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px;
         }
-        .logo-text { color: var(--blanco); font-size: 1.5rem; font-weight: 700; }
-        .logo-text span { color: var(--verde-claro); }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .logo-text { 
+            color: var(--blanco); 
+            font-size: 1.8rem; 
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .logo-text span { 
+            color: var(--verde-claro); 
+        }
 
         nav ul { display: flex; list-style: none; gap: 2rem; }
         nav a { color: var(--blanco); text-decoration: none; font-weight: 400; transition: color 0.3s; }
@@ -150,6 +161,7 @@
         .kit-price { font-size: 2.2rem; font-weight: 800; color: var(--azul-marino); margin-bottom: 0.5rem; }
         .kit-price small { font-size: 1rem; color: #999; text-decoration: line-through; display: block; font-weight: 400; }
         .kit-savings { background: #e8f5e9; color: var(--verde); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
+        
         .btn-kit {
             width: 100%;
             padding: 0.9rem;
@@ -162,8 +174,30 @@
             cursor: pointer;
             transition: all 0.3s;
             font-family: 'Poppins', sans-serif;
+            margin-bottom: 0.5rem;
         }
         .btn-kit:hover { background: var(--verde); }
+        
+        .btn-mercadopago {
+            width: 100%;
+            padding: 0.8rem;
+            background: #009ee3;
+            color: var(--blanco);
+            border: none;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+        .btn-mercadopago:hover { 
+            background: #0085c4; 
+            transform: translateY(-2px);
+        }
 
         /* RECARGA */
         .recarga-section {
@@ -467,6 +501,9 @@
             .nav-btn { padding: 0.7rem 1.2rem; font-size: 0.9rem; }
             
             .whatsapp-float { bottom: 20px; right: 20px; width: 55px; height: 55px; }
+            
+            .logo img { height: 40px; }
+            .logo-text { font-size: 1.4rem; }
         }
     </style>
 </head>
@@ -476,7 +513,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <div class="logo-icon">🚫</div>
+                <img src="images/logo-mataqk.png" alt="Mata QK Logo">
                 <div class="logo-text">Mata <span>QK</span></div>
             </div>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -500,11 +537,11 @@
         <p>Concentrado Mata QK: mezcla con agua, rocía y adiós plagas. Económico, efectivo y ecológico. Entrega local directa a tu puerta.</p>
         <a href="#kits" class="btn-primary">Ver Kits Disponibles</a>
         <div class="hero-badges">
-            <span class="badge">🚚 Entrega Local</span>
+            <span class="badge"> Entrega Local</span>
             <span class="badge">💰 Ahorra hasta 40%</span>
             <span class="badge">🌱 Eco-Friendly</span>
             <span class="badge">⚡ Resultados en Segundos</span>
-            <span class="badge">🎬 Casos Reales Comprobados</span>
+            <span class="badge"> Casos Reales Comprobados</span>
         </div>
     </section>
 
@@ -530,10 +567,11 @@
                             <li>Guía de aplicación impresa</li>
                         </ul>
                         <div class="kit-price">
-                            <small>$130 MXN</small>
-                            $125 MXN
+                            <small>$250 MXN</small>
+                            $200 MXN
                         </div>
-                        <button class="btn-kit" onclick="selectKit('Kit Inicio - 1 Atomizador + 5 Bolsas', 125)">Seleccionar Kit</button>
+                        <button class="btn-kit" onclick="selectKit('Kit Inicio - 1 Atomizador + 5 Bolsas', 200)">Seleccionar Kit</button>
+                        <a href="https://mpago.li/1XhWM2g" target="_blank" class="btn-mercadopago">💳 Pagar con Mercado Pago</a>
                     </div>
                 </div>
 
@@ -543,7 +581,7 @@
                         <img src="images/kit-2-familiar.jpg" alt="Kit Familiar Mata QK - 2 atomizadores + 10 bolsas de concentrado">
                     </div>
                     <div class="kit-content">
-                        <div class="kit-name">👨‍👩‍ Kit Familiar</div>
+                        <div class="kit-name">👨‍‍👧 Kit Familiar</div>
                         <div class="kit-desc">Perfecto para casas y protección completa</div>
                         <ul class="kit-includes">
                             <li>2 Atomizadores 1L premium</li>
@@ -552,12 +590,13 @@
                             <li>Guía de aplicación impresa</li>
                             <li>Soporte por WhatsApp</li>
                         </ul>
-                        <div class="kit-savings">¡Ahorras $25!</div>
+                        <div class="kit-savings">¡Ahorras $50!</div>
                         <div class="kit-price">
-                            <small>$260 MXN</small>
-                            $235 MXN
+                            <small>$450 MXN</small>
+                            $400 MXN
                         </div>
-                        <button class="btn-kit" onclick="selectKit('Kit Familiar - 2 Atomizadores + 10 Bolsas', 235)">Seleccionar Kit</button>
+                        <button class="btn-kit" onclick="selectKit('Kit Familiar - 2 Atomizadores + 10 Bolsas', 400)">Seleccionar Kit</button>
+                        <a href="https://mpago.li/2gtb59v" target="_blank" class="btn-mercadopago"> Pagar con Mercado Pago</a>
                     </div>
                 </div>
 
@@ -567,7 +606,7 @@
                         <img src="images/kit-3-negocio.jpg" alt="Kit Negocio Mata QK - 3 atomizadores + 15 bolsas de concentrado">
                     </div>
                     <div class="kit-content">
-                        <div class="kit-name"> Kit Negocio</div>
+                        <div class="kit-name">🏪 Kit Negocio</div>
                         <div class="kit-desc">Para negocios, bodegas o compra vecinal</div>
                         <ul class="kit-includes">
                             <li>3 Atomizadores 1L premium</li>
@@ -577,12 +616,13 @@
                             <li>Soporte prioritario por WhatsApp</li>
                             <li>Mejor precio por litro</li>
                         </ul>
-                        <div class="kit-savings">¡Ahorras $50!</div>
+                        <div class="kit-savings">¡Ahorras $100!</div>
                         <div class="kit-price">
-                            <small>$390 MXN</small>
-                            $340 MXN
+                            <small>$700 MXN</small>
+                            $600 MXN
                         </div>
-                        <button class="btn-kit" onclick="selectKit('Kit Negocio - 3 Atomizadores + 15 Bolsas', 340)">Seleccionar Kit</button>
+                        <button class="btn-kit" onclick="selectKit('Kit Negocio - 3 Atomizadores + 15 Bolsas', 600)">Seleccionar Kit</button>
+                        <a href="https://mpago.li/1dE12eq" target="_blank" class="btn-mercadopago">💳 Pagar con Mercado Pago</a>
                     </div>
                 </div>
             </div>
@@ -593,12 +633,13 @@
                     <img src="images/recarga-bolsas.jpg" alt="Recarga Mata QK - 5 bolsas de concentrado">
                 </div>
                 <div class="recarga-content">
-                    <h3>🔄 ¿Ya tienes tu atomizador?</h3>
+                    <h3> ¿Ya tienes tu atomizador?</h3>
                     <p>Compra solo las recargas de concentrado</p>
                     <div class="recarga-price">
-                        $50 MXN <small>/ 5 bolsas</small>
+                        $100 MXN <small>/ 5 bolsas</small>
                     </div>
-                    <button class="btn-kit" onclick="selectKit('Recarga - 5 Bolsas Concentrado', 50)">Agregar Recarga</button>
+                    <button class="btn-kit" onclick="selectKit('Recarga - 5 Bolsas Concentrado', 100)">Agregar Recarga</button>
+                    <a href="https://mpago.la/2Ms163n" target="_blank" class="btn-mercadopago" style="margin-top: 0.5rem;">💳 Pagar con Mercado Pago</a>
                 </div>
             </div>
         </div>
@@ -860,10 +901,10 @@
                     <label>Producto Seleccionado <span class="required">*</span></label>
                     <select id="selectedProduct" required onchange="updateSummary()">
                         <option value="">-- Selecciona un kit --</option>
-                        <option value="Kit Inicio - 1 Atomizador + 5 Bolsas|125">Kit Inicio - 1 Atomizador + 5 Bolsas ($125)</option>
-                        <option value="Kit Familiar - 2 Atomizadores + 10 Bolsas|235">Kit Familiar - 2 Atomizadores + 10 Bolsas ($235)</option>
-                        <option value="Kit Negocio - 3 Atomizadores + 15 Bolsas|340">Kit Negocio - 3 Atomizadores + 15 Bolsas ($340)</option>
-                        <option value="Recarga - 5 Bolsas Concentrado|50">Recarga - 5 Bolsas Concentrado ($50)</option>
+                        <option value="Kit Inicio - 1 Atomizador + 5 Bolsas|200">Kit Inicio - 1 Atomizador + 5 Bolsas ($200)</option>
+                        <option value="Kit Familiar - 2 Atomizadores + 10 Bolsas|400">Kit Familiar - 2 Atomizadores + 10 Bolsas ($400)</option>
+                        <option value="Kit Negocio - 3 Atomizadores + 15 Bolsas|600">Kit Negocio - 3 Atomizadores + 15 Bolsas ($600)</option>
+                        <option value="Recarga - 5 Bolsas Concentrado|100">Recarga - 5 Bolsas Concentrado ($100)</option>
                     </select>
                 </div>
 
@@ -915,7 +956,7 @@
                 </div>
 
                 <div style="background: #fff3e0; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid #ff9800;">
-                    <h4 style="color: #e65100; margin-bottom: 0.5rem;"> Persona de Contacto Alternativa</h4>
+                    <h4 style="color: #e65100; margin-bottom: 0.5rem;">👤 Persona de Contacto Alternativa</h4>
                     <p style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">En caso de que no te encuentres al momento de la entrega</p>
                     
                     <div class="form-row">
@@ -939,7 +980,7 @@
                     <select id="paymentMethod" required>
                         <option value="">-- Selecciona método de pago --</option>
                         <option value="Mercado Pago (Tarjeta/OXXO)">💳 Mercado Pago (Tarjeta o OXXO)</option>
-                        <option value="Transferencia Bancaria (SPEI)">🏦 Transferencia Bancaria (SPEI)</option>
+                        <option value="Transferencia Bancaria (SPEI)"> Transferencia Bancaria (SPEI)</option>
                         <option value="Efectivo contra entrega">💵 Efectivo contra entrega</option>
                     </select>
                 </div>
@@ -960,7 +1001,7 @@
                 </div>
 
                 <div class="order-summary" id="orderSummary" style="display: none;">
-                    <h3> Resumen de tu Pedido</h3>
+                    <h3>📋 Resumen de tu Pedido</h3>
                     <div class="summary-item">
                         <span id="summaryProduct">-</span>
                         <span id="summaryQty">-</span>
@@ -982,14 +1023,14 @@
                     </label>
                 </div>
 
-                <button type="submit" class="btn-submit">🛒 Confirmar Pedido y Proceder al Pago</button>
+                <button type="submit" class="btn-submit"> Confirmar Pedido y Proceder al Pago</button>
 
                 <div class="payment-methods">
                     <p>🔒 Pagos 100% seguros procesados por:</p>
                     <div class="payment-icons">
                         <span class="payment-icon">💳 Mercado Pago</span>
                         <span class="payment-icon">🏦 SPEI</span>
-                        <span class="payment-icon"> OXXO</span>
+                        <span class="payment-icon">🏪 OXXO</span>
                         <span class="payment-icon">💵 Efectivo</span>
                     </div>
                 </div>
@@ -1001,14 +1042,14 @@
     <footer id="contacto">
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>🪳🚫 Mata QK</h4>
+                <h4>🪳 Mata QK</h4>
                 <p>Concentrado mata cucarachas de alto rendimiento. Fórmula profesional para uso doméstico.</p>
             </div>
             <div class="footer-col">
                 <h4>Contacto</h4>
                 <a href="https://wa.me/5219519231764" target="_blank">📱 WhatsApp: 951 923 1764</a>
-                <a href="https://t.me/9519231764" target="_blank">️ Telegram: 951 923 1764</a>
-                <a href="mailto:ventas@mataqk.com"> ventas@mataqk.com</a>
+                <a href="https://t.me/9519231764" target="_blank">✈️ Telegram: 951 923 1764</a>
+                <a href="mailto:ventas@mataqk.com">📧 ventas@mataqk.com</a>
                 <p>📍 Entrega local en tu ciudad</p>
             </div>
             <div class="footer-col">
@@ -1128,13 +1169,13 @@
         // ENVIAR POR WHATSAPP
         function sendToWhatsApp(data, orderNumber) {
             const phone = '5219519231764';
-            const message = ` *NUEVO PEDIDO MATA QK*%0A%0A` +
+            const message = `🛒 *NUEVO PEDIDO MATA QK*%0A%0A` +
                 `📋 *Pedido:* ${orderNumber}%0A` +
                 `📦 *Producto:* ${data.producto}%0A` +
-                ` *Cantidad:* ${data.cantidad}%0A` +
+                `🔢 *Cantidad:* ${data.cantidad}%0A` +
                 `💰 *Total:* $${data.total} MXN%0A%0A` +
                 `👤 *Cliente:* ${data.nombre}%0A` +
-                `📱 *Teléfono:* ${data.telefono}%0A` +
+                ` *Teléfono:* ${data.telefono}%0A` +
                 `📧 *Email:* ${data.email}%0A%0A` +
                 `📍 *Dirección:* ${data.direccion}, Col. ${data.colonia}, CP ${data.cp}, ${data.ciudad}%0A` +
                 `📝 *Referencias:* ${data.referencias || 'Ninguna'}%0A%0A` +
