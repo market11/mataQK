@@ -405,8 +405,15 @@
         .btn-submit:hover { background: var(--verde-claro); transform: translateY(-2px); }
         .payment-methods { text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--gris); }
         .payment-methods p { font-size: 0.9rem; color: #666; margin-bottom: 0.8rem; }
-        .payment-icons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .payment-icons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; align-items: center; }
         .payment-icon { background: var(--gris-claro); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; color: var(--azul-marino); }
+        .payment-icon-logo {
+            height: 35px;
+            border-radius: 8px;
+            object-fit: contain;
+            background: var(--blanco);
+            padding: 0.3rem;
+        }
 
         /* FOOTER */
         footer { background: var(--azul-marino); color: var(--blanco); padding: 3rem 2rem 1.5rem; }
@@ -537,11 +544,11 @@
         <p>Concentrado Mata QK: mezcla con agua, rocía y adiós plagas. Económico, efectivo y ecológico. Entrega local directa a tu puerta.</p>
         <a href="#kits" class="btn-primary">Ver Kits Disponibles</a>
         <div class="hero-badges">
-            <span class="badge"> Entrega Local</span>
+            <span class="badge">🚚 Entrega Local</span>
             <span class="badge">💰 Ahorra hasta 40%</span>
             <span class="badge">🌱 Eco-Friendly</span>
             <span class="badge">⚡ Resultados en Segundos</span>
-            <span class="badge"> Casos Reales Comprobados</span>
+            <span class="badge">🎬 Casos Reales Comprobados</span>
         </div>
     </section>
 
@@ -558,7 +565,7 @@
                         <img src="images/kit-1-inicio.jpg" alt="Kit Inicio Mata QK - 1 atomizador + 5 bolsas de concentrado">
                     </div>
                     <div class="kit-content">
-                        <div class="kit-name">🏠 Kit Inicio</div>
+                        <div class="kit-name"> Kit Inicio</div>
                         <div class="kit-desc">Ideal para departamentos y problemas puntuales</div>
                         <ul class="kit-includes">
                             <li>1 Atomizador 1L premium</li>
@@ -581,7 +588,7 @@
                         <img src="images/kit-2-familiar.jpg" alt="Kit Familiar Mata QK - 2 atomizadores + 10 bolsas de concentrado">
                     </div>
                     <div class="kit-content">
-                        <div class="kit-name">👨‍‍👧 Kit Familiar</div>
+                        <div class="kit-name">‍👧 Kit Familiar</div>
                         <div class="kit-desc">Perfecto para casas y protección completa</div>
                         <ul class="kit-includes">
                             <li>2 Atomizadores 1L premium</li>
@@ -596,7 +603,7 @@
                             $400 MXN
                         </div>
                         <button class="btn-kit" onclick="selectKit('Kit Familiar - 2 Atomizadores + 10 Bolsas', 400)">Seleccionar Kit</button>
-                        <a href="https://mpago.li/2gtb59v" target="_blank" class="btn-mercadopago"> Pagar con Mercado Pago</a>
+                        <a href="https://mpago.li/2gtb59v" target="_blank" class="btn-mercadopago">💳 Pagar con Mercado Pago</a>
                     </div>
                 </div>
 
@@ -633,7 +640,7 @@
                     <img src="images/recarga-bolsas.jpg" alt="Recarga Mata QK - 5 bolsas de concentrado">
                 </div>
                 <div class="recarga-content">
-                    <h3> ¿Ya tienes tu atomizador?</h3>
+                    <h3>🔄 ¿Ya tienes tu atomizador?</h3>
                     <p>Compra solo las recargas de concentrado</p>
                     <div class="recarga-price">
                         $100 MXN <small>/ 5 bolsas</small>
@@ -708,7 +715,7 @@
                         </video>
                     </div>
                     <div class="video-info">
-                        <span class="video-tag">🏪 Negocio</span>
+                        <span class="video-tag"> Negocio</span>
                         <h3>Segundo caso real próximamente</h3>
                         <p>Descripción del segundo caso que subirás. Ej: Bodega con infestación severa eliminada con 2 atomizaciones.</p>
                         <div class="video-rating">⭐⭐⭐⭐⭐ <span>Testimonio del cliente</span></div>
@@ -724,7 +731,7 @@
                         </video>
                     </div>
                     <div class="video-info">
-                        <span class="video-tag">‍👩‍👧 Casa</span>
+                        <span class="video-tag">👨‍‍👧 Casa</span>
                         <h3>Tercer caso real próximamente</h3>
                         <p>Descripción del tercer caso que subirás. Ej: Casa completa libre de cucarachas en 24 horas.</p>
                         <div class="video-rating">⭐⭐⭐⭐⭐ <span>Testimonio del cliente</span></div>
@@ -736,7 +743,7 @@
                 <p style="color: #666; margin-bottom: 1rem;">¿Ya usaste Mata QK? ¡Envíanos tu video y gana una recarga GRATIS!</p>
                 <a href="https://wa.me/5219519231764?text=Hola!%20Quiero%20enviar%20mi%20video%20de%20Mata%20QK" 
                    target="_blank" class="btn-primary" style="background: var(--azul-marino);">
-                     Enviar mi Video por WhatsApp
+                    📱 Enviar mi Video por WhatsApp
                 </a>
             </div>
         </div>
@@ -745,7 +752,7 @@
     <!-- INSTRUCCIONES DE USO -->
     <section id="instrucciones" style="background: var(--blanco);">
         <div class="container">
-            <h2 class="section-title">📋 Instrucciones de Uso</h2>
+            <h2 class="section-title"> Instrucciones de Uso</h2>
             <p class="section-subtitle">Sigue estos 6 pasos simples para obtener los mejores resultados con Mata QK</p>
             
             <div class="steps-video-container">
@@ -979,8 +986,8 @@
                     <label>Método de Pago <span class="required">*</span></label>
                     <select id="paymentMethod" required>
                         <option value="">-- Selecciona método de pago --</option>
-                        <option value="Mercado Pago (Tarjeta/OXXO)">💳 Mercado Pago (Tarjeta o OXXO)</option>
-                        <option value="Transferencia Bancaria (SPEI)"> Transferencia Bancaria (SPEI)</option>
+                        <option value="Mercado Pago">💳 Mercado Pago</option>
+                        <option value="CoDi">📱 CoDi (Pago con celular)</option>
                         <option value="Efectivo contra entrega">💵 Efectivo contra entrega</option>
                     </select>
                 </div>
@@ -1023,14 +1030,13 @@
                     </label>
                 </div>
 
-                <button type="submit" class="btn-submit"> Confirmar Pedido y Proceder al Pago</button>
+                <button type="submit" class="btn-submit">🛒 Confirmar Pedido</button>
 
                 <div class="payment-methods">
                     <p>🔒 Pagos 100% seguros procesados por:</p>
                     <div class="payment-icons">
                         <span class="payment-icon">💳 Mercado Pago</span>
-                        <span class="payment-icon">🏦 SPEI</span>
-                        <span class="payment-icon">🏪 OXXO</span>
+                        <img src="images/codi-logo.png" alt="CoDi" class="payment-icon-logo">
                         <span class="payment-icon">💵 Efectivo</span>
                     </div>
                 </div>
@@ -1042,7 +1048,7 @@
     <footer id="contacto">
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>🪳 Mata QK</h4>
+                <h4>🪳🚫 Mata QK</h4>
                 <p>Concentrado mata cucarachas de alto rendimiento. Fórmula profesional para uso doméstico.</p>
             </div>
             <div class="footer-col">
@@ -1083,7 +1089,7 @@
         <div class="modal">
             <div class="modal-icon">✅</div>
             <h2>¡Pedido Recibido!</h2>
-            <p>Te contactaremos por WhatsApp en las próximas 2 horas para confirmar la entrega y enviarte el link de pago.</p>
+            <p id="modalMessage">Te contactaremos por WhatsApp en las próximas 2 horas para confirmar la entrega y enviarte el link de pago.</p>
             <p><strong>Número de pedido:</strong> <span id="orderNumber"></span></p>
             <button class="btn-close-modal" onclick="closeModal()">Entendido</button>
         </div>
@@ -1158,6 +1164,21 @@
 
             localStorage.setItem('lastOrder', JSON.stringify({...orderData, orderNumber}));
             
+            // Mostrar mensaje personalizado según método de pago
+            if (orderData.metodoPago === 'CoDi') {
+                document.getElementById('modalMessage').innerHTML = 
+                    `<strong> Solicitud de Pago CoDi</strong><br><br>` +
+                    `Hemos recibido tu pedido. Te enviaremos un mensaje de WhatsApp en los próximos minutos ` +
+                    `para generarte el código CoDi y completar tu pago de <strong>$${orderData.total} MXN</strong>.<br><br>` +
+                    `Una vez confirmado el pago, te notificaremos para coordinar la entrega.`;
+            } else if (orderData.metodoPago === 'Mercado Pago') {
+                document.getElementById('modalMessage').textContent = 
+                    'Te contactaremos por WhatsApp en las próximas 2 horas para enviarte el link de pago de Mercado Pago.';
+            } else {
+                document.getElementById('modalMessage').textContent = 
+                    'Te contactaremos por WhatsApp en las próximas 2 horas para confirmar tu pedido y coordinar la entrega. Pago contra entrega.';
+            }
+            
             // Enviar por WhatsApp
             sendToWhatsApp(orderData, orderNumber);
 
@@ -1169,20 +1190,43 @@
         // ENVIAR POR WHATSAPP
         function sendToWhatsApp(data, orderNumber) {
             const phone = '5219519231764';
-            const message = `🛒 *NUEVO PEDIDO MATA QK*%0A%0A` +
-                `📋 *Pedido:* ${orderNumber}%0A` +
-                `📦 *Producto:* ${data.producto}%0A` +
-                `🔢 *Cantidad:* ${data.cantidad}%0A` +
-                `💰 *Total:* $${data.total} MXN%0A%0A` +
-                `👤 *Cliente:* ${data.nombre}%0A` +
-                ` *Teléfono:* ${data.telefono}%0A` +
-                `📧 *Email:* ${data.email}%0A%0A` +
-                `📍 *Dirección:* ${data.direccion}, Col. ${data.colonia}, CP ${data.cp}, ${data.ciudad}%0A` +
-                `📝 *Referencias:* ${data.referencias || 'Ninguna'}%0A%0A` +
-                `👤 *Contacto alterno:* ${data.personaAlterna || 'N/A'} - ${data.telAlterno || 'N/A'}%0A` +
-                `💳 *Pago:* ${data.metodoPago}%0A` +
-                `🕐 *Horario:* ${data.horarioEntrega}%0A%0A` +
-                `💬 *Comentarios:* ${data.comentarios || 'Ninguno'}`;
+            
+            let message = '';
+            
+            if (data.metodoPago === 'CoDi') {
+                // Mensaje especial para CoDi
+                message = `📱 *SOLICITUD DE PAGO CoDi - MATA QK*%0A%0A` +
+                    `📋 *Pedido:* ${orderNumber}%0A` +
+                    `📦 *Producto:* ${data.producto}%0A` +
+                    `🔢 *Cantidad:* ${data.cantidad}%0A` +
+                    `💰 *Total a Pagar:* $${data.total} MXN%0A%0A` +
+                    `👤 *Cliente:* ${data.nombre}%0A` +
+                    `📱 *Teléfono:* ${data.telefono}%0A` +
+                    `📧 *Email:* ${data.email}%0A%0A` +
+                    `📍 *Dirección:* ${data.direccion}, Col. ${data.colonia}, CP ${data.cp}, ${data.ciudad}%0A` +
+                    `📝 *Referencias:* ${data.referencias || 'Ninguna'}%0A%0A` +
+                    `💳 *Método de Pago:* CoDi (Código QR)%0A` +
+                    `⏰ *Horario:* ${data.horarioEntrega}%0A%0A` +
+                    `💬 *Comentarios:* ${data.comentarios || 'Ninguno'}%0A%0A` +
+                    `───────────────────%0A` +
+                    `*Por favor, generar código CoDi por $${data.total} MXN y enviar al cliente para completar el pago.*`;
+            } else {
+                // Mensaje normal para otros métodos
+                message = `🛒 *NUEVO PEDIDO MATA QK*%0A%0A` +
+                    `📋 *Pedido:* ${orderNumber}%0A` +
+                    `📦 *Producto:* ${data.producto}%0A` +
+                    ` *Cantidad:* ${data.cantidad}%0A` +
+                    `💰 *Total:* $${data.total} MXN%0A%0A` +
+                    `👤 *Cliente:* ${data.nombre}%0A` +
+                    `📱 *Teléfono:* ${data.telefono}%0A` +
+                    `📧 *Email:* ${data.email}%0A%0A` +
+                    `📍 *Dirección:* ${data.direccion}, Col. ${data.colonia}, CP ${data.cp}, ${data.ciudad}%0A` +
+                    `📝 *Referencias:* ${data.referencias || 'Ninguna'}%0A%0A` +
+                    `👤 *Contacto alterno:* ${data.personaAlterna || 'N/A'} - ${data.telAlterno || 'N/A'}%0A` +
+                    `💳 *Pago:* ${data.metodoPago}%0A` +
+                    `⏰ *Horario:* ${data.horarioEntrega}%0A%0A` +
+                    `💬 *Comentarios:* ${data.comentarios || 'Ninguno'}`;
+            }
             
             window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
         }
