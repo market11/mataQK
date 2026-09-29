@@ -199,42 +199,49 @@
         }
         .step h3 { color: var(--azul-marino); margin-bottom: 0.5rem; }
 
-        /* CASOS REALES - VIDEOS */
-        .videos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        /* CASOS REALES - VIDEOS TAMAÑO REDUCIDO */
+        .videos-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 1.5rem; 
+            margin-top: 2rem; 
+        }
         .video-card {
             background: var(--blanco);
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
             box-shadow: var(--sombra);
             transition: all 0.3s;
+            max-width: 350px;
+            margin: 0 auto;
         }
         .video-card:hover { transform: translateY(-5px); box-shadow: var(--sombra-hover); }
         .video-container {
             position: relative;
             width: 100%;
             background: #000;
-            aspect-ratio: 9/16;
-            max-height: 500px;
+            aspect-ratio: 9/14;
+            max-height: 380px;
         }
         .video-container video { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .video-info { padding: 1.5rem; }
+        .video-info { padding: 1.2rem; }
         .video-tag {
             display: inline-block;
             background: #e3f2fd;
             color: #1565c0;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
+            padding: 0.25rem 0.7rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
             font-weight: 600;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
         }
-        .video-info h3 { color: var(--azul-marino); font-size: 1.1rem; margin-bottom: 0.5rem; }
-        .video-info p { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
-        .video-rating { font-size: 0.9rem; color: #ffa000; border-top: 1px solid var(--gris); padding-top: 0.8rem; }
+        .video-info h3 { color: var(--azul-marino); font-size: 1rem; margin-bottom: 0.4rem; }
+        .video-info p { color: #666; font-size: 0.85rem; margin-bottom: 0.8rem; line-height: 1.5; }
+        .video-rating { font-size: 0.85rem; color: #ffa000; border-top: 1px solid var(--gris); padding-top: 0.6rem; }
         .video-rating span { color: #666; font-style: italic; }
 
-        /* INSTRUCCIONES DE USO */
-        .steps-video-container { max-width: 900px; margin: 0 auto; }
+        /* INSTRUCCIONES DE USO - VIDEOS TAMAÑO REDUCIDO */
+        .steps-video-container { max-width: 800px; margin: 0 auto; }
         .steps-progress { width: 100%; height: 6px; background: var(--gris); border-radius: 10px; margin-bottom: 2rem; overflow: hidden; }
         .progress-bar { height: 100%; background: linear-gradient(90deg, var(--verde), var(--verde-claro)); width: 16.66%; transition: width 0.4s ease; border-radius: 10px; }
         .steps-nav { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
@@ -253,15 +260,43 @@
         .step-btn:hover { border-color: var(--verde); transform: scale(1.1); }
         .step-btn.active { background: var(--azul-marino); color: var(--blanco); border-color: var(--azul-marino); transform: scale(1.1); }
         .step-content { display: none; animation: fadeIn 0.5s ease; }
-        .step-content.active { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+        .step-content.active { 
+            display: grid; 
+            grid-template-columns: 1fr 1.2fr; 
+            gap: 1.5rem; 
+            align-items: center; 
+        }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .step-video { background: #000; border-radius: 20px; overflow: hidden; aspect-ratio: 9/16; max-height: 500px; box-shadow: var(--sombra); }
+        .step-video { 
+            background: #000; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            aspect-ratio: 9/14; 
+            max-height: 380px; 
+            box-shadow: var(--sombra); 
+        }
         .step-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .step-info { padding: 1rem; }
-        .step-number-badge { display: inline-block; background: var(--azul-marino); color: var(--blanco); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; }
-        .step-info h3 { color: var(--azul-marino); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700; }
-        .step-info p { color: #555; font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem; }
-        .step-tip { background: #fff8e1; border-left: 4px solid #ffa000; padding: 1rem; border-radius: 8px; font-size: 0.95rem; color: #555; }
+        .step-info { padding: 0.5rem; }
+        .step-number-badge { 
+            display: inline-block; 
+            background: var(--azul-marino); 
+            color: var(--blanco); 
+            padding: 0.3rem 0.8rem; 
+            border-radius: 15px; 
+            font-size: 0.8rem; 
+            font-weight: 600; 
+            margin-bottom: 0.8rem; 
+        }
+        .step-info h3 { color: var(--azul-marino); font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700; }
+        .step-info p { color: #555; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.2rem; }
+        .step-tip { 
+            background: #fff8e1; 
+            border-left: 4px solid #ffa000; 
+            padding: 0.8rem; 
+            border-radius: 6px; 
+            font-size: 0.9rem; 
+            color: #555; 
+        }
         .step-tip strong { color: var(--azul-marino); }
         .step-navigation-buttons { display: flex; justify-content: center; align-items: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
         .nav-btn {
@@ -411,20 +446,26 @@
             .form-row { grid-template-columns: 1fr; }
             .order-form { padding: 1.5rem; }
             .section-title { font-size: 1.7rem; }
-            .videos-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-            .video-container { aspect-ratio: 9/16; max-height: 450px; }
+            
+            /* Videos responsivos */
+            .video-card { max-width: 100%; }
+            .video-container { aspect-ratio: 9/14; max-height: 320px; }
+            
             .kits-grid { grid-template-columns: 1fr; gap: 1.5rem; }
             .kit-image { height: 220px; }
             .recarga-section { grid-template-columns: 1fr; }
             .recarga-image { height: 200px; }
             .kit-price { font-size: 1.8rem; }
             .recarga-price { font-size: 2rem; }
-            .step-content.active { grid-template-columns: 1fr; gap: 1.5rem; }
-            .step-video { max-height: 400px; margin: 0 auto; max-width: 300px; }
-            .step-info h3 { font-size: 1.2rem; }
+            
+            /* Instrucciones responsivo */
+            .step-content.active { grid-template-columns: 1fr; gap: 1.2rem; }
+            .step-video { max-height: 320px; margin: 0 auto; max-width: 280px; }
+            .step-info h3 { font-size: 1.1rem; }
             .step-btn { width: 42px; height: 42px; font-size: 1rem; }
             .step-navigation-buttons { gap: 1rem; }
             .nav-btn { padding: 0.7rem 1.2rem; font-size: 0.9rem; }
+            
             .whatsapp-float { bottom: 20px; right: 20px; width: 55px; height: 55px; }
         }
     </style>
@@ -502,7 +543,7 @@
                         <img src="images/kit-2-familiar.jpg" alt="Kit Familiar Mata QK - 2 atomizadores + 10 bolsas de concentrado">
                     </div>
                     <div class="kit-content">
-                        <div class="kit-name">👨‍‍👧 Kit Familiar</div>
+                        <div class="kit-name">👨‍👩‍ Kit Familiar</div>
                         <div class="kit-desc">Perfecto para casas y protección completa</div>
                         <ul class="kit-includes">
                             <li>2 Atomizadores 1L premium</li>
@@ -526,7 +567,7 @@
                         <img src="images/kit-3-negocio.jpg" alt="Kit Negocio Mata QK - 3 atomizadores + 15 bolsas de concentrado">
                     </div>
                     <div class="kit-content">
-                        <div class="kit-name">🏪 Kit Negocio</div>
+                        <div class="kit-name"> Kit Negocio</div>
                         <div class="kit-desc">Para negocios, bodegas o compra vecinal</div>
                         <ul class="kit-includes">
                             <li>3 Atomizadores 1L premium</li>
@@ -642,7 +683,7 @@
                         </video>
                     </div>
                     <div class="video-info">
-                        <span class="video-tag">👨‍👩‍👧 Casa</span>
+                        <span class="video-tag">‍👩‍👧 Casa</span>
                         <h3>Tercer caso real próximamente</h3>
                         <p>Descripción del tercer caso que subirás. Ej: Casa completa libre de cucarachas en 24 horas.</p>
                         <div class="video-rating">⭐⭐⭐⭐⭐ <span>Testimonio del cliente</span></div>
@@ -654,7 +695,7 @@
                 <p style="color: #666; margin-bottom: 1rem;">¿Ya usaste Mata QK? ¡Envíanos tu video y gana una recarga GRATIS!</p>
                 <a href="https://wa.me/5219519231764?text=Hola!%20Quiero%20enviar%20mi%20video%20de%20Mata%20QK" 
                    target="_blank" class="btn-primary" style="background: var(--azul-marino);">
-                    📱 Enviar mi Video por WhatsApp
+                     Enviar mi Video por WhatsApp
                 </a>
             </div>
         </div>
@@ -663,7 +704,7 @@
     <!-- INSTRUCCIONES DE USO -->
     <section id="instrucciones" style="background: var(--blanco);">
         <div class="container">
-            <h2 class="section-title"> Instrucciones de Uso</h2>
+            <h2 class="section-title">📋 Instrucciones de Uso</h2>
             <p class="section-subtitle">Sigue estos 6 pasos simples para obtener los mejores resultados con Mata QK</p>
             
             <div class="steps-video-container">
@@ -812,7 +853,7 @@
             
             <form class="order-form" id="orderForm" onsubmit="handleOrder(event)">
                 <div class="form-note">
-                     Todos los campos marcados con <span style="color: #e53935;">*</span> son obligatorios. Tu información es 100% segura.
+                    📦 Todos los campos marcados con <span style="color: #e53935;">*</span> son obligatorios. Tu información es 100% segura.
                 </div>
 
                 <div class="form-group">
@@ -874,7 +915,7 @@
                 </div>
 
                 <div style="background: #fff3e0; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid #ff9800;">
-                    <h4 style="color: #e65100; margin-bottom: 0.5rem;">👤 Persona de Contacto Alternativa</h4>
+                    <h4 style="color: #e65100; margin-bottom: 0.5rem;"> Persona de Contacto Alternativa</h4>
                     <p style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">En caso de que no te encuentres al momento de la entrega</p>
                     
                     <div class="form-row">
@@ -919,7 +960,7 @@
                 </div>
 
                 <div class="order-summary" id="orderSummary" style="display: none;">
-                    <h3>📋 Resumen de tu Pedido</h3>
+                    <h3> Resumen de tu Pedido</h3>
                     <div class="summary-item">
                         <span id="summaryProduct">-</span>
                         <span id="summaryQty">-</span>
@@ -941,7 +982,7 @@
                     </label>
                 </div>
 
-                <button type="submit" class="btn-submit"> Confirmar Pedido y Proceder al Pago</button>
+                <button type="submit" class="btn-submit">🛒 Confirmar Pedido y Proceder al Pago</button>
 
                 <div class="payment-methods">
                     <p>🔒 Pagos 100% seguros procesados por:</p>
@@ -966,8 +1007,8 @@
             <div class="footer-col">
                 <h4>Contacto</h4>
                 <a href="https://wa.me/5219519231764" target="_blank">📱 WhatsApp: 951 923 1764</a>
-                <a href="https://t.me/9519231764" target="_blank">✈️ Telegram: 951 923 1764</a>
-                <a href="mailto:ventas@mataqk.com">📧 ventas@mataqk.com</a>
+                <a href="https://t.me/9519231764" target="_blank">️ Telegram: 951 923 1764</a>
+                <a href="mailto:ventas@mataqk.com"> ventas@mataqk.com</a>
                 <p>📍 Entrega local en tu ciudad</p>
             </div>
             <div class="footer-col">
@@ -1087,10 +1128,10 @@
         // ENVIAR POR WHATSAPP
         function sendToWhatsApp(data, orderNumber) {
             const phone = '5219519231764';
-            const message = `🛒 *NUEVO PEDIDO MATA QK*%0A%0A` +
+            const message = ` *NUEVO PEDIDO MATA QK*%0A%0A` +
                 `📋 *Pedido:* ${orderNumber}%0A` +
                 `📦 *Producto:* ${data.producto}%0A` +
-                `🔢 *Cantidad:* ${data.cantidad}%0A` +
+                ` *Cantidad:* ${data.cantidad}%0A` +
                 `💰 *Total:* $${data.total} MXN%0A%0A` +
                 `👤 *Cliente:* ${data.nombre}%0A` +
                 `📱 *Teléfono:* ${data.telefono}%0A` +
