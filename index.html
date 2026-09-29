@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mata QK - Concentrado mata cucarachas. Kits con atomizador y recargas. Entrega local.">
-    <title>Mata QK | Concentrado Mata Cucarachas - Kits y Recargas</title>
+    <meta name="description" content="Mata QK - Concentrado mata cucarachas. Kits con atomizador y recargas. Entrega local. Casos reales comprobados.">
+    <title>Mata QK | Concentrado Mata Cucarachas - Casos Reales y Kits</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -21,11 +21,7 @@
             --sombra-hover: 0 8px 30px rgba(10, 37, 64, 0.2);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Poppins', sans-serif;
@@ -52,58 +48,21 @@
             align-items: center;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
+        .logo { display: flex; align-items: center; gap: 10px; }
         .logo-icon {
-            width: 45px;
-            height: 45px;
+            width: 45px; height: 45px;
             background: var(--blanco);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             font-size: 1.5rem;
         }
+        .logo-text { color: var(--blanco); font-size: 1.5rem; font-weight: 700; }
+        .logo-text span { color: var(--verde-claro); }
 
-        .logo-text {
-            color: var(--blanco);
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .logo-text span {
-            color: var(--verde-claro);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: var(--blanco);
-            text-decoration: none;
-            font-weight: 400;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--verde-claro);
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { color: var(--blanco); text-decoration: none; font-weight: 400; transition: color 0.3s; }
+        nav a:hover { color: var(--verde-claro); }
+        .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
 
         /* HERO */
         .hero {
@@ -112,40 +71,11 @@
             padding: 5rem 2rem;
             text-align: center;
         }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .hero h1 span {
-            color: var(--verde-claro);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            opacity: 0.9;
-        }
-
-        .hero-badges {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .badge {
-            background: rgba(255,255,255,0.15);
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            backdrop-filter: blur(10px);
-        }
-
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
+        .hero h1 span { color: var(--verde-claro); }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.9; }
+        .hero-badges { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+        .badge { background: rgba(255,255,255,0.15); padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.9rem; backdrop-filter: blur(10px); }
         .btn-primary {
             display: inline-block;
             background: var(--verde);
@@ -159,44 +89,16 @@
             border: none;
             cursor: pointer;
         }
-
-        .btn-primary:hover {
-            background: var(--verde-claro);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
-        }
+        .btn-primary:hover { background: var(--verde-claro); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4); }
 
         /* SECCIONES */
-        section {
-            padding: 4rem 2rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: var(--azul-marino);
-            margin-bottom: 0.5rem;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-        }
+        section { padding: 4rem 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2.2rem; color: var(--azul-marino); margin-bottom: 0.5rem; }
+        .section-subtitle { text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem; }
 
         /* KITS */
-        .kits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
+        .kits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         .kit-card {
             background: var(--blanco);
             border-radius: 20px;
@@ -207,21 +109,12 @@
             position: relative;
             overflow: hidden;
         }
-
-        .kit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--sombra-hover);
-        }
-
-        .kit-card.popular {
-            border-color: var(--verde);
-        }
-
+        .kit-card:hover { transform: translateY(-5px); box-shadow: var(--sombra-hover); }
+        .kit-card.popular { border-color: var(--verde); }
         .kit-card.popular::before {
             content: '⭐ MÁS VENDIDO';
             position: absolute;
-            top: 15px;
-            right: -30px;
+            top: 15px; right: -30px;
             background: var(--verde);
             color: white;
             padding: 5px 40px;
@@ -229,63 +122,14 @@
             font-weight: 700;
             transform: rotate(45deg);
         }
-
-        .kit-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--azul-marino);
-            margin-bottom: 0.5rem;
-        }
-
-        .kit-desc {
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .kit-includes {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-
-        .kit-includes li {
-            padding: 0.4rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .kit-includes li::before {
-            content: '✓';
-            color: var(--verde);
-            font-weight: 700;
-        }
-
-        .kit-price {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--azul-marino);
-        }
-
-        .kit-price small {
-            font-size: 1rem;
-            color: #999;
-            text-decoration: line-through;
-            display: block;
-            font-weight: 400;
-        }
-
-        .kit-savings {
-            background: #e8f5e9;
-            color: var(--verde);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-block;
-            margin: 0.5rem 0 1rem;
-        }
-
+        .kit-name { font-size: 1.3rem; font-weight: 700; color: var(--azul-marino); margin-bottom: 0.5rem; }
+        .kit-desc { color: #666; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .kit-includes { list-style: none; margin-bottom: 1.5rem; }
+        .kit-includes li { padding: 0.4rem 0; display: flex; align-items: center; gap: 0.5rem; }
+        .kit-includes li::before { content: '✓'; color: var(--verde); font-weight: 700; }
+        .kit-price { font-size: 2.5rem; font-weight: 800; color: var(--azul-marino); }
+        .kit-price small { font-size: 1rem; color: #999; text-decoration: line-through; display: block; font-weight: 400; }
+        .kit-savings { background: #e8f5e9; color: var(--verde); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; display: inline-block; margin: 0.5rem 0 1rem; }
         .btn-kit {
             width: 100%;
             padding: 0.9rem;
@@ -298,61 +142,61 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-
-        .btn-kit:hover {
-            background: var(--verde);
-        }
+        .btn-kit:hover { background: var(--verde); }
 
         /* CÓMO FUNCIONA */
-        .how-it-works {
-            background: var(--gris-claro);
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .step {
-            text-align: center;
-            padding: 1.5rem;
-        }
-
+        .how-it-works { background: var(--gris-claro); }
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .step { text-align: center; padding: 1.5rem; }
         .step-number {
-            width: 60px;
-            height: 60px;
+            width: 60px; height: 60px;
             background: var(--azul-marino);
             color: var(--blanco);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; font-weight: 700;
             margin: 0 auto 1rem;
         }
+        .step h3 { color: var(--azul-marino); margin-bottom: 0.5rem; }
 
-        .step h3 {
-            color: var(--azul-marino);
-            margin-bottom: 0.5rem;
+        /* CASOS REALES - VIDEOS */
+        .videos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .video-card {
+            background: var(--blanco);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--sombra);
+            transition: all 0.3s;
         }
-
-        /* FORMULARIO DE PEDIDO */
-        .order-section {
-            background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-medio) 100%);
-            color: var(--blanco);
+        .video-card:hover { transform: translateY(-5px); box-shadow: var(--sombra-hover); }
+        .video-container {
+            position: relative;
+            width: 100%;
+            background: #000;
+            aspect-ratio: 9/16;
+            max-height: 500px;
         }
-
-        .order-section .section-title {
-            color: var(--blanco);
+        .video-container video { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .video-info { padding: 1.5rem; }
+        .video-tag {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
         }
+        .video-info h3 { color: var(--azul-marino); font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .video-info p { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
+        .video-rating { font-size: 0.9rem; color: #ffa000; border-top: 1px solid var(--gris); padding-top: 0.8rem; }
+        .video-rating span { color: #666; font-style: italic; }
 
-        .order-section .section-subtitle {
-            color: rgba(255,255,255,0.8);
-        }
-
+        /* FORMULARIO */
+        .order-section { background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-medio) 100%); color: var(--blanco); }
+        .order-section .section-title { color: var(--blanco); }
+        .order-section .section-subtitle { color: rgba(255,255,255,0.8); }
         .order-form {
             max-width: 700px;
             margin: 0 auto;
@@ -362,26 +206,10 @@
             box-shadow: var(--sombra-hover);
             color: var(--texto);
         }
-
-        .form-group {
-            margin-bottom: 1.2rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 0.4rem;
-            color: var(--azul-marino);
-            font-size: 0.95rem;
-        }
-
-        .form-group label .required {
-            color: #e53935;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.4rem; color: var(--azul-marino); font-size: 0.95rem; }
+        .form-group label .required { color: #e53935; }
+        .form-group input, .form-group select, .form-group textarea {
             width: 100%;
             padding: 0.8rem 1rem;
             border: 2px solid var(--gris);
@@ -390,20 +218,8 @@
             font-size: 1rem;
             transition: border-color 0.3s;
         }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--verde);
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--verde); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
         .form-note {
             background: #e3f2fd;
             padding: 0.8rem 1rem;
@@ -413,35 +229,10 @@
             margin-bottom: 1.5rem;
             border-left: 4px solid #1565c0;
         }
-
-        .order-summary {
-            background: var(--gris-claro);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-        }
-
-        .order-summary h3 {
-            color: var(--azul-marino);
-            margin-bottom: 1rem;
-        }
-
-        .summary-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--gris);
-        }
-
-        .summary-total {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 1rem;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--azul-marino);
-        }
-
+        .order-summary { background: var(--gris-claro); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem; }
+        .order-summary h3 { color: var(--azul-marino); margin-bottom: 1rem; }
+        .summary-item { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--gris); }
+        .summary-total { display: flex; justify-content: space-between; padding-top: 1rem; font-size: 1.3rem; font-weight: 700; color: var(--azul-marino); }
         .btn-submit {
             width: 100%;
             padding: 1rem;
@@ -455,172 +246,59 @@
             transition: all 0.3s;
             margin-top: 1rem;
         }
-
-        .btn-submit:hover {
-            background: var(--verde-claro);
-            transform: translateY(-2px);
-        }
-
-        .payment-methods {
-            text-align: center;
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--gris);
-        }
-
-        .payment-methods p {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 0.8rem;
-        }
-
-        .payment-icons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .payment-icon {
-            background: var(--gris-claro);
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--azul-marino);
-        }
+        .btn-submit:hover { background: var(--verde-claro); transform: translateY(-2px); }
+        .payment-methods { text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--gris); }
+        .payment-methods p { font-size: 0.9rem; color: #666; margin-bottom: 0.8rem; }
+        .payment-icons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .payment-icon { background: var(--gris-claro); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; color: var(--azul-marino); }
 
         /* FOOTER */
-        footer {
-            background: var(--azul-marino);
-            color: var(--blanco);
-            padding: 3rem 2rem 1.5rem;
-        }
+        footer { background: var(--azul-marino); color: var(--blanco); padding: 3rem 2rem 1.5rem; }
+        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-col h4 { margin-bottom: 1rem; color: var(--verde-claro); }
+        .footer-col p, .footer-col a { color: rgba(255,255,255,0.8); text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .footer-col a:hover { color: var(--verde-claro); }
+        .footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; opacity: 0.7; }
 
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-col h4 {
-            margin-bottom: 1rem;
-            color: var(--verde-claro);
-        }
-
-        .footer-col p, .footer-col a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-
-        .footer-col a:hover {
-            color: var(--verde-claro);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.85rem;
-            opacity: 0.7;
-        }
-
-        /* MODAL DE CONFIRMACIÓN */
+        /* MODAL */
         .modal-overlay {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: rgba(0,0,0,0.6);
             z-index: 2000;
             justify-content: center;
             align-items: center;
             padding: 1rem;
         }
-
-        .modal-overlay.active {
-            display: flex;
-        }
-
-        .modal {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .modal-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-        }
-
-        .modal h2 {
-            color: var(--azul-marino);
-            margin-bottom: 1rem;
-        }
-
-        .modal p {
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
-
-        .btn-close-modal {
-            background: var(--azul-marino);
-            color: white;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: 600;
-        }
+        .modal-overlay.active { display: flex; }
+        .modal { background: white; padding: 2.5rem; border-radius: 20px; max-width: 500px; width: 100%; text-align: center; }
+        .modal-icon { font-size: 4rem; margin-bottom: 1rem; }
+        .modal h2 { color: var(--azul-marino); margin-bottom: 1rem; }
+        .modal p { color: #666; margin-bottom: 1.5rem; }
+        .btn-close-modal { background: var(--azul-marino); color: white; border: none; padding: 0.8rem 2rem; border-radius: 10px; cursor: pointer; font-weight: 600; }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-
+            .menu-toggle { display: block; }
             nav ul {
                 display: none;
                 position: absolute;
-                top: 100%;
-                left: 0;
+                top: 100%; left: 0;
                 width: 100%;
                 background: var(--azul-marino);
                 flex-direction: column;
                 padding: 1rem 2rem;
                 gap: 1rem;
             }
-
-            nav ul.active {
-                display: flex;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .order-form {
-                padding: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.7rem;
-            }
+            nav ul.active { display: flex; }
+            .hero h1 { font-size: 2rem; }
+            .form-row { grid-template-columns: 1fr; }
+            .order-form { padding: 1.5rem; }
+            .section-title { font-size: 1.7rem; }
+            .videos-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .video-container { aspect-ratio: 9/16; max-height: 450px; }
         }
     </style>
 </head>
@@ -630,7 +308,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <div class="logo-icon">🚫</div>
+                <div class="logo-icon"></div>
                 <div class="logo-text">Mata <span>QK</span></div>
             </div>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -639,6 +317,7 @@
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#kits">Kits</a></li>
                     <li><a href="#como-funciona">Cómo Funciona</a></li>
+                    <li><a href="#casos-reales">Casos Reales</a></li>
                     <li><a href="#pedido">Hacer Pedido</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
@@ -655,7 +334,8 @@
             <span class="badge">🚚 Entrega Local</span>
             <span class="badge">💰 Ahorra hasta 40%</span>
             <span class="badge">🌱 Eco-Friendly</span>
-            <span class="badge">⚡ Resultados Rápidos</span>
+            <span class="badge">⚡ Resultados en Segundos</span>
+            <span class="badge">🎬 Casos Reales Comprobados</span>
         </div>
     </section>
 
@@ -666,7 +346,6 @@
             <p class="section-subtitle">Elige el que mejor se adapte a tu necesidad. Todos incluyen atomizador + recargas concentradas.</p>
             
             <div class="kits-grid">
-                <!-- Kit 1 -->
                 <div class="kit-card">
                     <div class="kit-name"> Kit Inicio</div>
                     <div class="kit-desc">Ideal para departamentos y problemas puntuales</div>
@@ -676,16 +355,12 @@
                         <li>5 Litros de producto listo para usar</li>
                         <li>Guía de aplicación impresa</li>
                     </ul>
-                    <div class="kit-price">
-                        <small>$130 MXN</small>
-                        $125 MXN
-                    </div>
+                    <div class="kit-price"><small>$130 MXN</small>$125 MXN</div>
                     <button class="btn-kit" onclick="selectKit('Kit Inicio - 1 Atomizador + 5 Bolsas', 125)">Seleccionar Kit</button>
                 </div>
 
-                <!-- Kit 2 -->
                 <div class="kit-card popular">
-                    <div class="kit-name">‍👩‍👧 Kit Familiar</div>
+                    <div class="kit-name">👩‍ Kit Familiar</div>
                     <div class="kit-desc">Perfecto para casas y protección completa</div>
                     <ul class="kit-includes">
                         <li>2 Atomizadores 1L premium</li>
@@ -695,14 +370,10 @@
                         <li>Soporte por WhatsApp</li>
                     </ul>
                     <div class="kit-savings">¡Ahorras $25!</div>
-                    <div class="kit-price">
-                        <small>$260 MXN</small>
-                        $235 MXN
-                    </div>
+                    <div class="kit-price"><small>$260 MXN</small>$235 MXN</div>
                     <button class="btn-kit" onclick="selectKit('Kit Familiar - 2 Atomizadores + 10 Bolsas', 235)">Seleccionar Kit</button>
                 </div>
 
-                <!-- Kit 3 -->
                 <div class="kit-card">
                     <div class="kit-name">🏪 Kit Negocio</div>
                     <div class="kit-desc">Para negocios, bodegas o compra vecinal</div>
@@ -715,15 +386,11 @@
                         <li>Mejor precio por litro</li>
                     </ul>
                     <div class="kit-savings">¡Ahorras $50!</div>
-                    <div class="kit-price">
-                        <small>$390 MXN</small>
-                        $340 MXN
-                    </div>
+                    <div class="kit-price"><small>$390 MXN</small>$340 MXN</div>
                     <button class="btn-kit" onclick="selectKit('Kit Negocio - 3 Atomizadores + 15 Bolsas', 340)">Seleccionar Kit</button>
                 </div>
             </div>
 
-            <!-- Recarga -->
             <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--gris-claro); border-radius: 15px;">
                 <h3 style="color: var(--azul-marino); margin-bottom: 0.5rem;">🔄 ¿Ya tienes tu atomizador?</h3>
                 <p style="margin-bottom: 1rem;">Compra solo las recargas de concentrado</p>
@@ -764,6 +431,72 @@
         </div>
     </section>
 
+    <!-- CASOS REALES (NUEVA SECCIÓN) -->
+    <section id="casos-reales" style="background: var(--gris-claro);">
+        <div class="container">
+            <h2 class="section-title">🎬 Casos Reales</h2>
+            <p class="section-subtitle">Resultados comprobados por nuestros clientes. Así funciona Mata QK en la vida real.</p>
+            
+            <div class="videos-grid">
+                <!-- Video 1 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata">
+                            <source src="videos/caso-real-1.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-tag">🏠 Departamento</span>
+                        <h3>Cucaracha en estante de cocina</h3>
+                        <p>Aplicación directa en grietas y esquinas. La cucaracha queda incapacitada en segundos. Cliente de Zona Norte.</p>
+                        <div class="video-rating">⭐⭐⭐⭐⭐ <span>"Funcionó al primer rociado"</span></div>
+                    </div>
+                </div>
+
+                <!-- Video 2 (Placeholder) -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata">
+                            <source src="videos/caso-real-2.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-tag">🏪 Negocio</span>
+                        <h3>Segundo caso real próximamente</h3>
+                        <p>Descripción del segundo caso que subirás. Ej: Bodega con infestación severa eliminada con 2 atomizaciones.</p>
+                        <div class="video-rating">⭐⭐⭐⭐⭐ <span>Testimonio del cliente</span></div>
+                    </div>
+                </div>
+
+                <!-- Video 3 (Placeholder) -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata">
+                            <source src="videos/caso-real-3.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-tag">👨‍👩‍ Casa</span>
+                        <h3>Tercer caso real próximamente</h3>
+                        <p>Descripción del tercer caso que subirás. Ej: Casa completa libre de cucarachas en 24 horas.</p>
+                        <div class="video-rating">⭐⭐⭐⭐⭐ <span>Testimonio del cliente</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: #666; margin-bottom: 1rem;">¿Ya usaste Mata QK? ¡Envíanos tu video y gana una recarga GRATIS!</p>
+                <a href="https://wa.me/5215512345678?text=Hola!%20Quiero%20enviar%20mi%20video%20de%20Mata%20QK" 
+                   target="_blank" class="btn-primary" style="background: var(--azul-marino);">
+                    📱 Enviar mi Video por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- FORMULARIO DE PEDIDO -->
     <section class="order-section" id="pedido">
         <div class="container">
@@ -772,10 +505,9 @@
             
             <form class="order-form" id="orderForm" onsubmit="handleOrder(event)">
                 <div class="form-note">
-                    📦 Todos los campos marcados con <span style="color: #e53935;">*</span> son obligatorios. Tu información es 100% segura y solo se usará para procesar tu pedido.
+                    📦 Todos los campos marcados con <span style="color: #e53935;">*</span> son obligatorios. Tu información es 100% segura.
                 </div>
 
-                <!-- Producto seleccionado -->
                 <div class="form-group">
                     <label>Producto Seleccionado <span class="required">*</span></label>
                     <select id="selectedProduct" required onchange="updateSummary()">
@@ -787,13 +519,11 @@
                     </select>
                 </div>
 
-                <!-- Cantidad -->
                 <div class="form-group">
                     <label>Cantidad <span class="required">*</span></label>
                     <input type="number" id="quantity" min="1" value="1" required onchange="updateSummary()">
                 </div>
 
-                <!-- Datos personales -->
                 <div class="form-row">
                     <div class="form-group">
                         <label>Nombre Completo <span class="required">*</span></label>
@@ -801,7 +531,7 @@
                     </div>
                     <div class="form-group">
                         <label>Teléfono / WhatsApp <span class="required">*</span></label>
-                        <input type="tel" id="phone" placeholder="Ej: 55 1234 5678" required pattern="[0-9\s\-\+\(\)]{10,}">
+                        <input type="tel" id="phone" placeholder="Ej: 55 1234 5678" required>
                     </div>
                 </div>
 
@@ -810,10 +540,9 @@
                     <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
                 </div>
 
-                <!-- Dirección -->
                 <div class="form-group">
                     <label>Dirección de Entrega <span class="required">*</span></label>
-                    <input type="text" id="address" placeholder="Calle, número exterior, número interior (si aplica)" required>
+                    <input type="text" id="address" placeholder="Calle, número exterior e interior" required>
                 </div>
 
                 <div class="form-row">
@@ -823,7 +552,7 @@
                     </div>
                     <div class="form-group">
                         <label>Código Postal <span class="required">*</span></label>
-                        <input type="text" id="zipCode" placeholder="Ej: 06000" required pattern="[0-9]{5}">
+                        <input type="text" id="zipCode" placeholder="Ej: 06000" required>
                     </div>
                 </div>
 
@@ -834,13 +563,12 @@
 
                 <div class="form-group">
                     <label>Referencias de la Dirección</label>
-                    <textarea id="references" rows="2" placeholder="Ej: Casa color azul, portón negro, entre calle X y calle Y"></textarea>
+                    <textarea id="references" rows="2" placeholder="Ej: Casa color azul, portón negro"></textarea>
                 </div>
 
-                <!-- Persona de contacto alternativa -->
                 <div style="background: #fff3e0; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid #ff9800;">
-                    <h4 style="color: #e65100; margin-bottom: 0.5rem;">👤 Persona de Contacto Alternativa</h4>
-                    <p style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">En caso de que no te encuentres en el domicilio al momento de la entrega</p>
+                    <h4 style="color: #e65100; margin-bottom: 0.5rem;"> Persona de Contacto Alternativa</h4>
+                    <p style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">En caso de que no te encuentres al momento de la entrega</p>
                     
                     <div class="form-row">
                         <div class="form-group" style="margin-bottom: 0.5rem;">
@@ -854,22 +582,20 @@
                     </div>
                     <div class="form-group" style="margin-bottom: 0;">
                         <label>Relación / Instrucciones</label>
-                        <input type="text" id="altRelation" placeholder="Ej: Mi esposa, el portero, mi vecino del 2B">
+                        <input type="text" id="altRelation" placeholder="Ej: Mi esposa, el portero">
                     </div>
                 </div>
 
-                <!-- Método de pago -->
                 <div class="form-group">
                     <label>Método de Pago <span class="required">*</span></label>
                     <select id="paymentMethod" required>
                         <option value="">-- Selecciona método de pago --</option>
-                        <option value="Mercado Pago (Tarjeta/OXXO)">💳 Mercado Pago (Tarjeta de crédito/débito o OXXO)</option>
+                        <option value="Mercado Pago (Tarjeta/OXXO)">💳 Mercado Pago (Tarjeta o OXXO)</option>
                         <option value="Transferencia Bancaria (SPEI)">🏦 Transferencia Bancaria (SPEI)</option>
                         <option value="Efectivo contra entrega">💵 Efectivo contra entrega</option>
                     </select>
                 </div>
 
-                <!-- Horario de entrega -->
                 <div class="form-group">
                     <label>Horario Preferido de Entrega</label>
                     <select id="deliveryTime">
@@ -880,15 +606,13 @@
                     </select>
                 </div>
 
-                <!-- Comentarios -->
                 <div class="form-group">
                     <label>Comentarios Adicionales</label>
-                    <textarea id="comments" rows="2" placeholder="¿Algo que debamos saber sobre tu pedido?"></textarea>
+                    <textarea id="comments" rows="2" placeholder="¿Algo que debamos saber?"></textarea>
                 </div>
 
-                <!-- Resumen del pedido -->
                 <div class="order-summary" id="orderSummary" style="display: none;">
-                    <h3>📋 Resumen de tu Pedido</h3>
+                    <h3> Resumen de tu Pedido</h3>
                     <div class="summary-item">
                         <span id="summaryProduct">-</span>
                         <span id="summaryQty">-</span>
@@ -903,24 +627,21 @@
                     </div>
                 </div>
 
-                <!-- Aceptación de términos -->
                 <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.5rem;">
                     <input type="checkbox" id="terms" required style="width: auto; margin-top: 0.3rem;">
                     <label for="terms" style="font-weight: 400; font-size: 0.9rem; margin: 0;">
-                        Acepto los términos y condiciones, y autorizo el uso de mis datos para procesar este pedido. Entiendo que me contactarán para confirmar la entrega. <span class="required">*</span>
+                        Acepto los términos y condiciones. <span class="required">*</span>
                     </label>
                 </div>
 
-                <button type="submit" class="btn-submit">
-                    🛒 Confirmar Pedido y Proceder al Pago
-                </button>
+                <button type="submit" class="btn-submit">🛒 Confirmar Pedido y Proceder al Pago</button>
 
                 <div class="payment-methods">
-                    <p>🔒 Pagos 100% seguros procesados por:</p>
+                    <p> Pagos 100% seguros procesados por:</p>
                     <div class="payment-icons">
                         <span class="payment-icon">💳 Mercado Pago</span>
                         <span class="payment-icon">🏦 SPEI</span>
-                        <span class="payment-icon">🏪 OXXO</span>
+                        <span class="payment-icon"> OXXO</span>
                         <span class="payment-icon">💵 Efectivo</span>
                     </div>
                 </div>
@@ -933,7 +654,7 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>🪳🚫 Mata QK</h4>
-                <p>Concentrado mata cucarachas de alto rendimiento. Fórmula profesional ahora disponible para uso doméstico.</p>
+                <p>Concentrado mata cucarachas de alto rendimiento. Fórmula profesional para uso doméstico.</p>
             </div>
             <div class="footer-col">
                 <h4>Contacto</h4>
@@ -950,33 +671,31 @@
             <div class="footer-col">
                 <h4>Enlaces Rápidos</h4>
                 <a href="#kits">Ver Kits</a>
-                <a href="#como-funciona">Cómo Funciona</a>
+                <a href="#casos-reales">Casos Reales</a>
                 <a href="#pedido">Hacer Pedido</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 Mata QK. Todos los derechos reservados. | Producto registrado y seguro para uso doméstico.</p>
+            <p>© 2024 Mata QK. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- MODAL DE CONFIRMACIÓN -->
+    <!-- MODAL -->
     <div class="modal-overlay" id="confirmationModal">
         <div class="modal">
             <div class="modal-icon">✅</div>
             <h2>¡Pedido Recibido!</h2>
-            <p id="modalMessage">Tu pedido ha sido registrado exitosamente. Te contactaremos por WhatsApp en las próximas 2 horas para confirmar los detalles de entrega y enviarte el link de pago de Mercado Pago.</p>
+            <p>Te contactaremos por WhatsApp en las próximas 2 horas para confirmar la entrega y enviarte el link de pago.</p>
             <p><strong>Número de pedido:</strong> <span id="orderNumber"></span></p>
             <button class="btn-close-modal" onclick="closeModal()">Entendido</button>
         </div>
     </div>
 
     <script>
-        // Menú móvil
         function toggleMenu() {
             document.getElementById('navMenu').classList.toggle('active');
         }
 
-        // Seleccionar kit desde las tarjetas
         function selectKit(productName, price) {
             const select = document.getElementById('selectedProduct');
             for (let option of select.options) {
@@ -989,7 +708,6 @@
             document.getElementById('pedido').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Actualizar resumen del pedido
         function updateSummary() {
             const productSelect = document.getElementById('selectedProduct');
             const quantity = document.getElementById('quantity').value;
@@ -1008,11 +726,9 @@
             }
         }
 
-        // Manejar envío del formulario
         function handleOrder(e) {
             e.preventDefault();
             
-            // Recopilar datos
             const orderData = {
                 producto: document.getElementById('selectedProduct').value.split('|')[0],
                 precio: document.getElementById('selectedProduct').value.split('|')[1],
@@ -1035,35 +751,21 @@
                 fecha: new Date().toLocaleString('es-MX')
             };
 
-            // Generar número de pedido
             const orderNumber = 'MQK-' + Date.now().toString().slice(-6);
             document.getElementById('orderNumber').textContent = orderNumber;
 
-            // Aquí normalmente enviarías los datos a tu servidor
-            // Por ahora, los guardamos en localStorage y mostramos confirmación
             localStorage.setItem('lastOrder', JSON.stringify({...orderData, orderNumber}));
             
-            // Enviar por WhatsApp (opcional - descomenta para activar)
+            // Descomenta la siguiente línea para enviar por WhatsApp:
             // sendToWhatsApp(orderData, orderNumber);
 
-            // Mostrar modal de confirmación
             document.getElementById('confirmationModal').classList.add('active');
-            
-            // Resetear formulario
             document.getElementById('orderForm').reset();
             document.getElementById('orderSummary').style.display = 'none';
-
-            // Si el método de pago es Mercado Pago, redirigir (ejemplo)
-            if (orderData.metodoPago.includes('Mercado Pago')) {
-                setTimeout(() => {
-                    alert('En un entorno real, aquí serías redirigido al checkout de Mercado Pago.\n\nPara activar esto, necesitas:\n1. Crear una cuenta de vendedor en Mercado Pago\n2. Generar links de pago o usar la API\n3. Integrar el SDK de Mercado Pago');
-                }, 2000);
-            }
         }
 
-        // Función para enviar pedido por WhatsApp (alternativa simple)
         function sendToWhatsApp(data, orderNumber) {
-            const phone = '5215512345678'; // Tu número de WhatsApp con lada
+            const phone = '5215512345678'; // Cambia por tu número
             const message = `🛒 *NUEVO PEDIDO MATA QK*%0A%0A` +
                 `📋 *Pedido:* ${orderNumber}%0A` +
                 `📦 *Producto:* ${data.producto}%0A` +
@@ -1076,23 +778,20 @@
                 `📝 *Referencias:* ${data.referencias || 'Ninguna'}%0A%0A` +
                 `👤 *Contacto alterno:* ${data.personaAlterna || 'N/A'} - ${data.telAlterno || 'N/A'}%0A` +
                 `💳 *Pago:* ${data.metodoPago}%0A` +
-                ` *Horario:* ${data.horarioEntrega}%0A%0A` +
+                `🕐 *Horario:* ${data.horarioEntrega}%0A%0A` +
                 `💬 *Comentarios:* ${data.comentarios || 'Ninguno'}`;
             
             window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
         }
 
-        // Cerrar modal
         function closeModal() {
             document.getElementById('confirmationModal').classList.remove('active');
         }
 
-        // Cerrar modal al hacer clic fuera
         document.getElementById('confirmationModal').addEventListener('click', function(e) {
             if (e.target === this) closeModal();
         });
 
-        // Smooth scroll para navegación
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
