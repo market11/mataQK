@@ -304,6 +304,12 @@
             max-height: 380px;
         }
         .video-container video { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .video-container iframe { width: 100%; height: 100%; border: 0; display: block; }
+        .video-container.horizontal { aspect-ratio: 16/9; max-height: none; }
+        .video-container.horizontal video { object-fit: contain; }
+        .video-card.wide { max-width: 720px; grid-column: 1 / -1; }
+        .videos-grid.centered { grid-template-columns: repeat(auto-fit, minmax(240px, 280px)); justify-content: center; }
+        .yt-title { text-align: center; color: var(--azul-marino); font-size: 1.5rem; margin: 3.5rem 0 1.2rem; }
         .video-info { padding: 1.2rem; }
         .video-tag {
             display: inline-block;
@@ -661,6 +667,7 @@
             
             .video-card { max-width: 100%; }
             .video-container { aspect-ratio: 9/14; max-height: 320px; }
+            .video-container.horizontal { aspect-ratio: 16/9; max-height: none; }
             
             .kits-grid { grid-template-columns: 1fr; gap: 1.5rem; }
             .kit-image { height: 220px; }
@@ -861,7 +868,7 @@
             <h2 class="section-title">🎬 Casos Reales en Video</h2>
             <p class="section-subtitle">Resultados comprobados por nuestros clientes. Así funciona Mata QK en la vida real.</p>
             
-            <div class="videos-grid">
+            <div class="videos-grid centered">
                 <!-- Video 1 -->
                 <div class="video-card">
                     <div class="video-container">
@@ -878,41 +885,85 @@
                     </div>
                 </div>
 
-                <!--
-                    VIDEOS 2 Y 3 OCULTOS HASTA QUE TENGAS EL MATERIAL REAL.
-                    Para activarlos: sube el video a la carpeta "videos/", escribe el título,
-                    la descripción y la frase real del cliente, y quita estas líneas de comentario.
-
+                <!-- Video 2 -->
                 <div class="video-card">
                     <div class="video-container">
-                        <video controls preload="metadata">
+                        <video controls preload="metadata" playsinline>
                             <source src="videos/caso-real-2.mp4" type="video/mp4">
                             Tu navegador no soporta el elemento de video.
                         </video>
                     </div>
                     <div class="video-info">
-                        <span class="video-tag">🏪 Negocio</span>
-                        <h3>Título del caso</h3>
-                        <p>Descripción del caso.</p>
-                        <div class="video-rating">⭐⭐⭐⭐⭐ <span>"Frase real del cliente"</span></div>
+                        <span class="video-tag">🍋 Cocina</span>
+                        <h3>Cucarachas en mesa y piso de cocina</h3>
+                        <p>Aplicación sobre la mesa de la cocina y el piso, donde se esconden entre la comida y las esquinas.</p>
                     </div>
                 </div>
 
+                <!-- Video 3 -->
                 <div class="video-card">
                     <div class="video-container">
-                        <video controls preload="metadata">
+                        <video controls preload="metadata" playsinline>
                             <source src="videos/caso-real-3.mp4" type="video/mp4">
                             Tu navegador no soporta el elemento de video.
                         </video>
                     </div>
                     <div class="video-info">
-                        <span class="video-tag">👨‍👩‍👧 Casa</span>
-                        <h3>Título del caso</h3>
-                        <p>Descripción del caso.</p>
-                        <div class="video-rating">⭐⭐⭐⭐⭐ <span>"Frase real del cliente"</span></div>
+                        <span class="video-tag">🏠 Casa</span>
+                        <h3>Rociado sobre mesa de madera</h3>
+                        <p>Se rocía Mata QK sobre la superficie y se observa cómo actúa sobre la cucaracha al contacto.</p>
                     </div>
                 </div>
-                -->
+
+                <!-- Video 4 (sin audio) -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata" playsinline muted>
+                            <source src="videos/mata_qk_sin_audio_1.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-tag">🧱 Zoclos y rincones</span>
+                        <h3>Cucarachas junto a la pared</h3>
+                        <p>Aplicación en el rincón entre el piso y la pared, detrás de cables y aparatos, donde se ocultan las cucarachas.</p>
+                    </div>
+                </div>
+
+                <!-- Video 5 (sin audio, horizontal) -->
+                <div class="video-card wide">
+                    <div class="video-container horizontal">
+                        <video controls preload="metadata" playsinline muted>
+                            <source src="videos/mata_qk2_sin_audio.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-tag">💧 Contenedor</span>
+                        <h3>Cucarachas dentro de un contenedor</h3>
+                        <p>Cucarachas atrapadas en el fondo de un contenedor después de la aplicación de Mata QK.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIDEOS DE YOUTUBE -->
+            <h3 class="yt-title">▶️ Más videos en YouTube</h3>
+                <div class="video-card wide" style="margin-bottom: 1.5rem;">
+                    <div class="video-container horizontal">
+                        <iframe src="https://www.youtube-nocookie.com/embed/yl6o1bUVFBY" title="Mata QK en YouTube" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                    </div>
+                </div>
+            <div class="videos-grid centered">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube-nocookie.com/embed/ZrUzX0IYPes" title="Mata QK - Short 1" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube-nocookie.com/embed/vgu1HmhPgxo" title="Mata QK - Short 2" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
