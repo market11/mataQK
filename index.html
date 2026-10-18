@@ -279,6 +279,35 @@
         .aviso-diseno-icon { font-size: 1.3rem; line-height: 1.4; }
         .aviso-diseno strong { color: var(--azul-marino); }
 
+        /* BENEFICIOS */
+        .kit-per-liter strong { color: var(--verde); font-size: 1rem; }
+        .recarga-rinde { color: #555 !important; font-size: 0.92rem; margin-bottom: 0.8rem !important; }
+        .recarga-rinde strong { color: var(--azul-marino); }
+        .beneficios-section { background: var(--blanco); }
+        .rinde-destacado {
+            display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap;
+            background: linear-gradient(135deg, var(--azul-marino), var(--azul-medio));
+            color: var(--blanco); border-radius: 20px; padding: 2rem 1.5rem; margin-bottom: 2rem;
+        }
+        .rinde-item { display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 150px; }
+        .rinde-num { font-size: 2.4rem; font-weight: 800; color: var(--verde-claro); line-height: 1.1; }
+        .rinde-txt { font-size: 0.9rem; opacity: 0.9; }
+        .rinde-flecha { font-size: 2rem; color: var(--verde-claro); }
+        .tabla-wrap { overflow-x: auto; border-radius: 15px; box-shadow: var(--sombra); }
+        .tabla-rinde { width: 100%; border-collapse: collapse; background: var(--blanco); font-size: 0.95rem; }
+        .tabla-rinde th { background: var(--gris-claro); color: var(--azul-marino); padding: 0.9rem; text-align: center; font-weight: 700; }
+        .tabla-rinde td { padding: 0.9rem; text-align: center; border-top: 1px solid var(--gris); }
+        .tabla-rinde td:first-child { text-align: left; }
+        .tabla-rinde td small { display: block; color: #888; font-size: 0.8rem; }
+        .tabla-rinde .ahorro { color: var(--verde); font-weight: 700; }
+        .tabla-rinde .fila-popular { background: #f1f8e9; }
+        .tabla-nota { text-align: center; color: #777; font-size: 0.85rem; margin-top: 1rem; }
+        .seguro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+        .seguro-card { background: #f1f8e9; border-radius: 15px; padding: 1.5rem; text-align: center; border: 2px solid #dcedc8; }
+        .seguro-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .seguro-card h3 { color: var(--azul-marino); font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .seguro-card p { color: #555; font-size: 0.9rem; }
+
         /* CÓMO FUNCIONA */
         .how-it-works { background: var(--gris-claro); }
         .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 2rem; }
@@ -696,6 +725,15 @@
             .evidencia-image { height: 220px; }
             
             .step-content.active { grid-template-columns: 1fr; gap: 1.2rem; }
+            .rinde-flecha { transform: rotate(90deg); }
+            .rinde-destacado { flex-direction: column; }
+            .tabla-rinde thead { display: none; }
+            .tabla-rinde, .tabla-rinde tbody, .tabla-rinde tr, .tabla-rinde td { display: block; width: 100%; }
+            .tabla-rinde tr { border-bottom: 6px solid var(--gris-claro); }
+            .tabla-rinde td { display: flex; justify-content: space-between; text-align: right; border-top: 1px solid #f0f0f0; padding: 0.6rem 1rem; }
+            .tabla-rinde td::before { content: attr(data-label); font-weight: 600; color: var(--azul-marino); text-align: left; }
+            .tabla-rinde td:first-child { display: block; text-align: left; background: var(--gris-claro); }
+            .tabla-rinde td:first-child::before { content: none; }
             .step-video { max-height: 320px; margin: 0 auto; max-width: 280px; }
             .step-info h3 { font-size: 1.1rem; }
             .step-btn { width: 42px; height: 42px; font-size: 1rem; }
@@ -724,6 +762,7 @@
                 <ul id="navMenu">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#kits">Kits</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
                     <li><a href="#como-funciona">Cómo Funciona</a></li>
                     <li><a href="#casos-reales">Casos Reales</a></li>
                     <li><a href="#evidencias">Evidencias</a></li>
@@ -767,11 +806,11 @@
                         <ul class="kit-includes">
                             <li>1 Atomizador 1L premium</li>
                             <li>5 Bolsas de concentrado Mata QK</li>
-                            <li>5 Litros de producto listo para usar</li>
+                            <li>Rinde 10 litros (½ bolsa por litro)</li>
                             <li>Guía de aplicación impresa</li>
                         </ul>
                         <div class="kit-price">$168 MXN</div>
-                        <div class="kit-per-liter">$33.60 por litro</div>
+                        <div class="kit-per-liter"><strong>$16.80</strong> por litro preparado<br>5,000 a 10,000 gatillazos · desde 2 centavos c/u</div>
                         <button class="btn-kit" onclick="selectKit('inicio')">Pedir este Kit</button>
                     </div>
                 </div>
@@ -787,7 +826,7 @@
                         <ul class="kit-includes">
                             <li>2 Atomizadores 1L premium</li>
                             <li>10 Bolsas de concentrado Mata QK</li>
-                            <li>10 Litros de producto listo para usar</li>
+                            <li>Rinde 20 litros (½ bolsa por litro)</li>
                             <li>Guía de aplicación impresa</li>
                             <li>Soporte por WhatsApp</li>
                         </ul>
@@ -796,7 +835,7 @@
                             <small>Por separado: <s>$336 MXN</s></small>
                             $310 MXN
                         </div>
-                        <div class="kit-per-liter">$31.00 por litro</div>
+                        <div class="kit-per-liter"><strong>$15.50</strong> por litro preparado<br>10,000 a 20,000 gatillazos · desde 1.6 centavos c/u</div>
                         <button class="btn-kit" onclick="selectKit('familiar')">Pedir este Kit</button>
                     </div>
                 </div>
@@ -812,7 +851,7 @@
                         <ul class="kit-includes">
                             <li>2 Atomizadores 1L premium</li>
                             <li>15 Bolsas de concentrado Mata QK</li>
-                            <li>15 Litros de producto listo para usar</li>
+                            <li>Rinde 30 litros (½ bolsa por litro)</li>
                             <li>Guía de aplicación impresa</li>
                             <li>Soporte prioritario por WhatsApp</li>
                             <li>Mejor precio por litro</li>
@@ -822,7 +861,7 @@
                             <small>Por separado: <s>$456 MXN</s></small>
                             $345 MXN
                         </div>
-                        <div class="kit-per-liter">$23.00 por litro</div>
+                        <div class="kit-per-liter"><strong>$11.50</strong> por litro preparado<br>15,000 a 30,000 gatillazos · desde 1.2 centavos c/u</div>
                         <button class="btn-kit" onclick="selectKit('negocio')">Pedir este Kit</button>
                     </div>
                 </div>
@@ -840,6 +879,7 @@
                     <div class="recarga-price">
                         $120 MXN <small>/ 5 + 2 bolsas</small>
                     </div>
+                    <p class="recarga-rinde">Rinde <strong>14 litros</strong> · 7,000 a 14,000 gatillazos · <strong>$8.57</strong> por litro</p>
                     <div class="envio-gratis">🚚 Envío gratis</div>
                     <button class="btn-kit" onclick="selectKit('recarga')">Pedir Recarga</button>
                 </div>
@@ -849,6 +889,98 @@
             <div class="aviso-diseno">
                 <span class="aviso-diseno-icon">ℹ️</span>
                 <p><strong>Imágenes ilustrativas.</strong> La forma y el diseño de los atomizadores y de los sobres pueden variar, ya que no manejamos un diseño fijo. Lo que sí se mantiene es el contenido de cada kit: la cantidad de atomizadores y de bolsas de concentrado que se indica.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS: RENDIMIENTO Y SEGURIDAD -->
+    <section id="beneficios" class="beneficios-section">
+        <div class="container">
+            <h2 class="section-title">💪 Rinde el Doble, Cuesta Menos</h2>
+            <p class="section-subtitle">Con <strong>medio sobre</strong> preparas <strong>1 litro</strong>, y cada litro rinde de <strong>500 a 1,000 gatillazos</strong>.</p>
+
+            <div class="rinde-destacado">
+                <div class="rinde-item"><span class="rinde-num">½</span><span class="rinde-txt">sobre por litro de agua</span></div>
+                <div class="rinde-flecha">→</div>
+                <div class="rinde-item"><span class="rinde-num">1 L</span><span class="rinde-txt">de producto listo para usar</span></div>
+                <div class="rinde-flecha">→</div>
+                <div class="rinde-item"><span class="rinde-num">500–1,000</span><span class="rinde-txt">gatillazos por litro</span></div>
+            </div>
+
+            <div class="tabla-wrap">
+                <table class="tabla-rinde">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Litros que rinde</th>
+                            <th>Gatillazos</th>
+                            <th>Costo por litro</th>
+                            <th>Te ahorras</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Producto"><strong>Kit Inicio</strong><small>1 atomizador + 5 bolsas</small></td>
+                            <td data-label="Precio">$168</td>
+                            <td data-label="Litros que rinde">10 L</td>
+                            <td data-label="Gatillazos">5,000 – 10,000</td>
+                            <td data-label="Costo por litro">$16.80</td>
+                            <td data-label="Te ahorras">—</td>
+                        </tr>
+                        <tr class="fila-popular">
+                            <td data-label="Producto"><strong>Kit Familiar</strong><small>2 atomizadores + 10 bolsas</small></td>
+                            <td data-label="Precio">$310</td>
+                            <td data-label="Litros que rinde">20 L</td>
+                            <td data-label="Gatillazos">10,000 – 20,000</td>
+                            <td data-label="Costo por litro">$15.50</td>
+                            <td data-label="Te ahorras" class="ahorro">$26</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Producto"><strong>Kit Negocio</strong><small>2 atomizadores + 15 bolsas</small></td>
+                            <td data-label="Precio">$345</td>
+                            <td data-label="Litros que rinde">30 L</td>
+                            <td data-label="Gatillazos">15,000 – 30,000</td>
+                            <td data-label="Costo por litro">$11.50</td>
+                            <td data-label="Te ahorras" class="ahorro">$111</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Producto"><strong>Recarga (promoción)</strong><small>5 bolsas + 2 gratis</small></td>
+                            <td data-label="Precio">$120</td>
+                            <td data-label="Litros que rinde">14 L</td>
+                            <td data-label="Gatillazos">7,000 – 14,000</td>
+                            <td data-label="Costo por litro">$8.57</td>
+                            <td data-label="Te ahorras" class="ahorro">$48</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="tabla-nota">"Te ahorras" compara con comprar lo mismo por separado: atomizador $48 y bolsa $24. En la recarga, el ahorro son las 2 bolsas de regalo. Cada gatillazo te cuesta entre 1 y 3 centavos.</p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">🏡 Seguro para tu Hogar</h2>
+            <p class="section-subtitle">Elimina cucarachas sin complicarte la vida</p>
+
+            <div class="seguro-grid">
+                <div class="seguro-card">
+                    <div class="seguro-icon">✅</div>
+                    <h3>No es tóxico</h3>
+                    <p>Puedes usarlo con tranquilidad dentro de tu casa.</p>
+                </div>
+                <div class="seguro-card">
+                    <div class="seguro-icon">🐶</div>
+                    <h3>No daña a tus mascotas</h3>
+                    <p>Aplícalo en casa aunque tengas perros o gatos.</p>
+                </div>
+                <div class="seguro-card">
+                    <div class="seguro-icon">🧽</div>
+                    <h3>Limpieza fácil</h3>
+                    <p>Solo limpia el residuo con un trapo y listo.</p>
+                </div>
+                <div class="seguro-card">
+                    <div class="seguro-icon">🍽️</div>
+                    <h3>¿Cayó en los trastes?</h3>
+                    <p>Si cae en trastes o loza, solo lávalos con agua.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -878,7 +1010,7 @@
                 <div class="step">
                     <div class="step-number">4</div>
                     <h3>Mezcla y Aplica</h3>
-                    <p>Vierte 1 bolsa en el atomizador, agrega agua, agita y rocía. ¡Listo!</p>
+                    <p>Vierte ½ bolsa en el atomizador, completa con agua hasta 1 litro, agita y rocía. ¡Listo!</p>
                 </div>
             </div>
         </div>
@@ -989,7 +1121,6 @@
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
-                <p style="color: #666; margin-bottom: 1rem;">¿Ya usaste Mata QK? ¡Envíanos tu video y gana una recarga GRATIS!</p>
                 <a href="https://wa.me/5219519231764?text=Hola!%20Quiero%20enviar%20mi%20video%20de%20Mata%20QK" 
                    target="_blank" rel="noopener" class="btn-primary" style="background: var(--azul-marino);">
                     📱 Enviar mi Video por WhatsApp
@@ -1103,7 +1234,7 @@
                         <div class="step-info">
                             <span class="step-number-badge">Paso 2</span>
                             <h3>Abre la bolsa de concentrado</h3>
-                            <p>Corta con cuidado una bolsita de concentrado Mata QK por la esquina superior. Vierte todo el contenido dentro del atomizador vacío.</p>
+                            <p>Corta con cuidado una bolsita de concentrado Mata QK por la esquina superior. Vierte <strong>la mitad del contenido</strong> dentro del atomizador vacío; con medio sobre preparas 1 litro. Guarda la otra mitad bien cerrada para tu siguiente preparación.</p>
                             <div class="step-tip">
                                 ⚠️ <strong>Precaución:</strong> Evita el contacto directo con la piel. Usa guantes si eres sensible.
                             </div>
