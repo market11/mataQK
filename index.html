@@ -198,26 +198,6 @@
         }
         .btn-kit:hover { background: var(--verde); }
         
-        .btn-mercadopago {
-            width: 100%;
-            padding: 0.8rem;
-            background: #009ee3;
-            color: var(--blanco);
-            border: none;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Poppins', sans-serif;
-            text-decoration: none;
-            text-align: center;
-            display: inline-block;
-        }
-        .btn-mercadopago:hover { 
-            background: #0085c4; 
-            transform: translateY(-2px);
-        }
 
         /* RECARGA */
         .recarga-section {
@@ -661,6 +641,13 @@
             font-size: 0.9rem;
             margin-bottom: 1.2rem;
         }
+        .btn-telegram-send {
+            display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+            background: #229ed9; color: white; text-decoration: none; padding: 0.9rem;
+            border-radius: 10px; font-weight: 700; font-size: 1rem; transition: all 0.3s;
+        }
+        .btn-telegram-send:hover { background: #1b8bc0; transform: translateY(-2px); }
+        .tg-hint { color: #888; font-size: 0.8rem; }
         .btn-close-modal { background: var(--azul-marino); color: white; border: none; padding: 0.8rem 2rem; border-radius: 10px; cursor: pointer; font-weight: 600; font-family: 'Poppins', sans-serif; }
 
         /* BOTÓN FLOTANTE WHATSAPP */
@@ -780,7 +767,8 @@
         <p>Concentrado Mata QK: mezcla con agua, rocía y adiós plagas. Económico, práctico y efectivo. Entrega local directa a tu puerta.</p>
         <a href="#kits" class="btn-primary">Ver Kits Disponibles</a>
         <div class="hero-badges">
-            <span class="badge">🚚 Entrega Local Gratis</span>
+            <span class="badge">🚚 Envío Gratis en la Ciudad</span>
+            <span class="badge">⏱️ Entrega en máx. 1 día hábil</span>
             <span class="badge">💰 Ahorra hasta 24%</span>
             <span class="badge">⚡ Acción al Contacto</span>
             <span class="badge">✅ Casos Reales Comprobados</span>
@@ -1000,12 +988,12 @@
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Haz tu Pedido</h3>
-                    <p>Llena el formulario y envíanos tu pedido por WhatsApp con un solo toque.</p>
+                    <p>Llena el formulario y envíanos tu pedido por WhatsApp o Telegram con un solo toque.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <h3>Recibe en Casa</h3>
-                    <p>Te lo entregamos personalmente en tu domicilio de forma segura.</p>
+                    <p>Te lo entregamos personalmente en tu domicilio en máximo 1 día hábil. Envío gratis dentro de la ciudad.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
@@ -1332,7 +1320,7 @@
     <section class="order-section" id="pedido">
         <div class="container">
             <h2 class="section-title">Realiza tu Pedido</h2>
-            <p class="section-subtitle">Completa tus datos y envíanos tu pedido por WhatsApp</p>
+            <p class="section-subtitle">Completa tus datos y envíanos tu pedido por WhatsApp o Telegram</p>
             
             <form class="order-form" id="orderForm" onsubmit="handleOrder(event)">
                 <div class="form-note">
@@ -1421,9 +1409,8 @@
                     <label for="paymentMethod">Método de Pago <span class="required">*</span></label>
                     <select id="paymentMethod" required>
                         <option value="">-- Selecciona método de pago --</option>
-                        <option value="Mercado Pago">💳 Mercado Pago</option>
-                        <option value="CoDi">📲 CoDi (Pago con celular)</option>
                         <option value="Efectivo contra entrega">💵 Efectivo contra entrega</option>
+                        <option value="Transferencia o depósito">🏦 Transferencia o depósito (te enviamos QR o link)</option>
                     </select>
                 </div>
 
@@ -1468,11 +1455,10 @@
                 <button type="submit" class="btn-submit">🛒 Continuar con mi Pedido</button>
 
                 <div class="payment-methods">
-                    <p>Formas de pago aceptadas:</p>
+                    <p>Pedidos únicamente por WhatsApp o Telegram · Formas de pago:</p>
                     <div class="payment-icons">
-                        <span class="payment-icon">💳 Mercado Pago</span>
-                        <img src="images/codi-logo.png" alt="CoDi" class="payment-icon-logo">
                         <span class="payment-icon">💵 Efectivo contra entrega</span>
+                        <span class="payment-icon">🏦 Transferencia o depósito</span>
                     </div>
                 </div>
             </form>
@@ -1525,7 +1511,7 @@
         <div class="modal">
             <div class="modal-icon">📲</div>
             <h2 id="modalTitle">¡Último paso!</h2>
-            <p>Toca el botón verde para <strong>enviarnos tu pedido por WhatsApp</strong>. Tu pedido queda registrado cuando nos llega ese mensaje.</p>
+            <p>Envíanos tu pedido por <strong>WhatsApp</strong> o <strong>Telegram</strong>. Tu pedido queda registrado cuando nos llega tu mensaje.</p>
             <p><strong>Número de pedido:</strong> <span id="orderNumber"></span></p>
 
             <div class="modal-actions">
@@ -1533,10 +1519,11 @@
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0Z"/></svg>
                     Enviar pedido por WhatsApp
                 </a>
-                <a href="#" id="mpPayBtn" class="btn-mercadopago" target="_blank" rel="noopener" style="display: none;">💳 Pagar ahora con Mercado Pago</a>
+                <a href="#" id="tgSendBtn" class="btn-telegram-send" target="_blank" rel="noopener">✈️ Enviar pedido por Telegram</a>
+                <small id="tgHint" class="tg-hint">Al tocar Telegram copiamos tu pedido; solo pégalo en el chat y envíalo.</small>
             </div>
 
-            <div class="modal-sent" id="modalSent">✅ ¡Gracias! Si ya enviaste el mensaje, te responderemos para confirmar tu entrega.</div>
+            <div class="modal-sent" id="modalSent">✅ ¡Gracias! En cuanto recibamos tu mensaje te confirmamos y entregamos en máximo 1 día hábil.</div>
 
             <p id="modalMessage" style="font-size: 0.9rem;"></p>
             <button class="btn-close-modal" onclick="closeModal()">Cerrar</button>
@@ -1548,15 +1535,18 @@
         // Número de WhatsApp que recibe los pedidos
         const WHATSAPP = '5219519231764';
 
+        // Telegram: cuando crees tu bot, pon aquí su usuario SIN @ (ej. 'MataQKBot').
+        // Mientras esté vacío, el botón de Telegram abre tu chat personal.
+        const TELEGRAM_BOT = '';
+        const TELEGRAM_PERSONAL = 'https://t.me/+529519231764';
+
         // Productos y precios. Para cambiar un precio, cámbialo aquí
         // y también en el texto de la tarjeta y del <select>.
-        // mpLink: pega aquí la liga de cobro de Mercado Pago con el precio NUEVO.
-        // Si se deja vacío, al cliente se le dice que le enviarán la liga por WhatsApp.
         const PRODUCTOS = {
-            inicio:   { nombre: 'Kit Inicio - 1 Atomizador + 5 Bolsas',      precio: 168, mpLink: '' },
-            familiar: { nombre: 'Kit Familiar - 2 Atomizadores + 10 Bolsas', precio: 310, mpLink: '' },
-            negocio:  { nombre: 'Kit Negocio - 2 Atomizadores + 15 Bolsas',  precio: 345, mpLink: '' },
-            recarga:  { nombre: 'Recarga - 5 Bolsas + 2 GRATIS (promoción)',  precio: 120, mpLink: '' }
+            inicio:   { nombre: 'Kit Inicio - 1 Atomizador + 5 Bolsas',      precio: 168 },
+            familiar: { nombre: 'Kit Familiar - 2 Atomizadores + 10 Bolsas', precio: 310 },
+            negocio:  { nombre: 'Kit Negocio - 2 Atomizadores + 15 Bolsas',  precio: 345 },
+            recarga:  { nombre: 'Recarga - 5 Bolsas + 2 GRATIS (promoción)',  precio: 120 }
         };
         // =========================================================
 
@@ -1632,34 +1622,43 @@
             const waBtn = document.getElementById('waSendBtn');
             waBtn.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(buildMessage(data, orderNumber))}`;
 
-            // Mensaje según el método de pago
-            const mpBtn = document.getElementById('mpPayBtn');
-            mpBtn.style.display = 'none';
-            const msg = document.getElementById('modalMessage');
+            // Telegram: se copia el pedido y se abre el chat
+            lastOrderText = buildMessage(data, orderNumber);
+            document.getElementById('tgSendBtn').href = TELEGRAM_BOT
+                ? `https://t.me/${TELEGRAM_BOT}?start=web`
+                : TELEGRAM_PERSONAL;
 
-            if (data.metodoPago === 'CoDi') {
-                msg.textContent = `Después de recibir tu mensaje te enviaremos el código CoDi por $${data.total} MXN. Una vez confirmado el pago, coordinamos la entrega.`;
-            } else if (data.metodoPago === 'Mercado Pago') {
-                if (producto.mpLink && cantidad === 1) {
-                    mpBtn.href = producto.mpLink;
-                    mpBtn.style.display = 'block';
-                    msg.textContent = 'Primero envía tu pedido por WhatsApp y después puedes pagar con el botón azul.';
-                } else {
-                    msg.textContent = `Después de recibir tu mensaje te enviaremos la liga de Mercado Pago por $${data.total} MXN.`;
-                }
+            // Mensaje según el método de pago
+            const msg = document.getElementById('modalMessage');
+            if (data.metodoPago === 'Transferencia o depósito') {
+                msg.textContent = `En breve te enviaremos un código QR o link para que realices tu pago de $${data.total} MXN. Envío gratis dentro de la ciudad y entrega en máximo 1 día hábil.`;
             } else {
-                msg.textContent = `Pagas $${data.total} MXN en efectivo al recibir tu pedido. Te confirmaremos la entrega por WhatsApp.`;
+                msg.textContent = `Pagas $${data.total} MXN en efectivo al recibir tu pedido. Envío gratis dentro de la ciudad y entrega en máximo 1 día hábil.`;
             }
 
             document.getElementById('modalSent').style.display = 'none';
             document.getElementById('confirmationModal').classList.add('active');
         }
 
-        // Al tocar "Enviar pedido por WhatsApp" ya se puede limpiar el formulario
-        document.getElementById('waSendBtn').addEventListener('click', function () {
+        let lastOrderText = '';
+
+        function pedidoEnviado() {
             document.getElementById('orderForm').reset();
             updateSummary();
             document.getElementById('modalSent').style.display = 'block';
+        }
+
+        // Al tocar "Enviar pedido por WhatsApp" ya se puede limpiar el formulario
+        document.getElementById('waSendBtn').addEventListener('click', pedidoEnviado);
+
+        // Telegram no permite mensajes prellenados: copiamos el pedido al portapapeles
+        document.getElementById('tgSendBtn').addEventListener('click', function () {
+            const texto = lastOrderText.replace(/\*/g, '');
+            try {
+                if (navigator.clipboard) navigator.clipboard.writeText(texto).catch(() => {});
+            } catch (e) {}
+            document.getElementById('tgHint').textContent = '📋 Pedido copiado. Pégalo en el chat de Telegram y envíalo.';
+            pedidoEnviado();
         });
 
         // ARMAR MENSAJE DE WHATSAPP (texto normal; se codifica con encodeURIComponent)
@@ -1669,7 +1668,7 @@
                 : 'N/A';
 
             const lineas = [
-                d.metodoPago === 'CoDi' ? '📲 *SOLICITUD DE PAGO CoDi - MATA QK*' : '🛒 *NUEVO PEDIDO MATA QK*',
+                '🛒 *NUEVO PEDIDO MATA QK*',
                 '',
                 `📋 *Pedido:* ${orderNumber}`,
                 `📦 *Producto:* ${d.producto}`,
@@ -1684,15 +1683,14 @@
                 `📝 *Referencias:* ${d.referencias || 'Ninguna'}`,
                 `👥 *Contacto alterno:* ${contactoAlterno}`,
                 '',
-                `💳 *Pago:* ${d.metodoPago === 'CoDi' ? 'CoDi (Código QR)' : d.metodoPago}`,
+                `💳 *Pago:* ${d.metodoPago}`,
                 `⏰ *Horario:* ${d.horarioEntrega}`,
                 '',
                 `💬 *Comentarios:* ${d.comentarios || 'Ninguno'}`
             ];
 
-            if (d.metodoPago === 'CoDi') {
-                lineas.push('', '───────────────────',
-                    `*Por favor, generar código CoDi por $${d.total} MXN y enviar al cliente para completar el pago.*`);
+            if (d.metodoPago === 'Transferencia o depósito') {
+                lineas.push('', `*Enviar QR o link de pago por $${d.total} MXN.*`);
             }
 
             return lineas.join('\n');
