@@ -244,6 +244,26 @@
             margin-bottom: 1.2rem;
         }
 
+        .qr-seccion { margin-top: 3rem; background: var(--gris-claro); border-radius: 20px; padding: 2rem 1.5rem; }
+        .qr-seccion-titulo { text-align: center; color: var(--azul-marino); font-size: 1.6rem; margin-bottom: 0.3rem; }
+        .qr-seccion-sub { text-align: center; color: #666; margin-bottom: 1.5rem; }
+        .qr-pasos { max-width: 720px; margin: 0 auto 2rem; padding-left: 1.4rem; color: #444; font-size: 0.95rem; }
+        .qr-pasos li { margin-bottom: 0.6rem; }
+        .qr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+        .qr-card { background: var(--blanco); border-radius: 15px; padding: 1.2rem; text-align: center; box-shadow: var(--sombra); }
+        .qr-card h4 { color: var(--azul-marino); font-size: 1.05rem; }
+        .qr-card small { color: #888; display: block; margin-bottom: 0.6rem; }
+        .qr-card img { width: 100%; max-width: 200px; height: auto; image-rendering: pixelated; display: block; margin: 0 auto 0.6rem; }
+        .qr-card-precio { font-size: 1.5rem; font-weight: 800; color: var(--azul-marino); margin-bottom: 0.6rem; }
+        .qr-comprobante { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.8rem; }
+        .qr-comprobante a { flex: 1 1 260px; max-width: 340px; }
+        .kit-qr { display: flex; gap: 0.8rem; align-items: center; background: var(--gris-claro); border-radius: 12px; padding: 0.7rem; margin-bottom: 1rem; text-align: left; }
+        .kit-qr img { width: 110px; height: 110px; flex-shrink: 0; image-rendering: pixelated; background: white; border-radius: 6px; }
+        .kit-qr-info { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.8rem; color: #555; }
+        .kit-qr-info strong { color: var(--azul-marino); font-size: 0.9rem; }
+        .kit-qr-info a { color: var(--azul-marino); font-weight: 700; text-decoration: none; }
+        .recarga-content .kit-qr { max-width: 380px; margin: 0 auto 1rem; }
+        .qr-seccion-nota { text-align: center; color: #777; font-size: 0.85rem; margin-top: 1rem; }
         .aviso-diseno {
             display: flex;
             gap: 0.8rem;
@@ -649,6 +669,12 @@
         }
         .btn-telegram-send:hover { background: #1b8bc0; transform: translateY(-2px); }
         .tg-hint { color: #888; font-size: 0.8rem; }
+        .qr-pago { background: var(--gris-claro); border-radius: 15px; padding: 1.2rem; margin-bottom: 1.2rem; }
+        .qr-nota-pago { background: #fff3e0; color: #e65100 !important; border-radius: 8px; padding: 0.5rem; font-size: 0.85rem; margin: 0.5rem 0 !important; }
+        .qr-pago img { width: 220px; max-width: 100%; height: auto; display: block; margin: 0.6rem auto; border-radius: 8px; background: white; image-rendering: pixelated; }
+        .qr-titulo { color: var(--azul-marino) !important; margin-bottom: 0 !important; font-size: 1rem; }
+        .qr-ayuda { font-size: 0.82rem; color: #666 !important; margin-bottom: 0.6rem !important; }
+        .qr-descargar { display: inline-block; background: var(--azul-marino); color: white; text-decoration: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.6rem; }
         .btn-close-modal { background: var(--azul-marino); color: white; border: none; padding: 0.8rem 2rem; border-radius: 10px; cursor: pointer; font-weight: 600; font-family: 'Poppins', sans-serif; }
 
         /* BOTÓN FLOTANTE TELEGRAM (arriba del de WhatsApp) */
@@ -841,6 +867,14 @@
                             <li>Rinde 10 litros (½ bolsa por litro)</li>
                             <li>Guía de aplicación impresa</li>
                         </ul>
+                        <div class="kit-qr">
+                            <img src="images/qr-inicio.png" alt="QR CoDi kit $168" loading="lazy">
+                            <div class="kit-qr-info">
+                                <strong>📲 Paga con CoDi</strong>
+                                <span>Este código paga <b>1 kit</b> ($168). ¿Quieres 2 o más? Escanéalo y paga <b>una vez por cada kit</b>.</span>
+                                <a href="images/qr-inicio.png" download="QR-MataQK-inicio.png">⬇️ Descargar QR</a>
+                            </div>
+                        </div>
                         <div class="kit-price">$168 MXN</div>
                         <div class="kit-per-liter"><strong>$16.80</strong> por litro preparado<br>5,000 a 10,000 gatillazos · desde 2 centavos c/u</div>
                         <button class="btn-kit" onclick="selectKit('inicio')">Pedir este Kit</button>
@@ -862,6 +896,14 @@
                             <li>Guía de aplicación impresa</li>
                             <li>Soporte por WhatsApp</li>
                         </ul>
+                        <div class="kit-qr">
+                            <img src="images/qr-familiar.png" alt="QR CoDi kit $310" loading="lazy">
+                            <div class="kit-qr-info">
+                                <strong>📲 Paga con CoDi</strong>
+                                <span>Este código paga <b>1 kit</b> ($310). ¿Quieres 2 o más? Escanéalo y paga <b>una vez por cada kit</b>.</span>
+                                <a href="images/qr-familiar.png" download="QR-MataQK-familiar.png">⬇️ Descargar QR</a>
+                            </div>
+                        </div>
                         <div class="kit-savings">¡Ahorras $26!</div>
                         <div class="kit-price">
                             <small>Por separado: <s>$336 MXN</s></small>
@@ -888,6 +930,14 @@
                             <li>Soporte prioritario por WhatsApp</li>
                             <li>Mejor precio por litro</li>
                         </ul>
+                        <div class="kit-qr">
+                            <img src="images/qr-negocio.png" alt="QR CoDi kit $345" loading="lazy">
+                            <div class="kit-qr-info">
+                                <strong>📲 Paga con CoDi</strong>
+                                <span>Este código paga <b>1 kit</b> ($345). ¿Quieres 2 o más? Escanéalo y paga <b>una vez por cada kit</b>.</span>
+                                <a href="images/qr-negocio.png" download="QR-MataQK-negocio.png">⬇️ Descargar QR</a>
+                            </div>
+                        </div>
                         <div class="kit-savings">¡Ahorras $111!</div>
                         <div class="kit-price">
                             <small>Por separado: <s>$456 MXN</s></small>
@@ -908,6 +958,14 @@
                     <h3>🔄 ¿Ya tienes tu atomizador?</h3>
                     <p>Compra solo las recargas de concentrado</p>
                     <div class="promo-tag">🎁 ¡2 bolsas más GRATIS!<small>Promoción por tiempo limitado</small></div>
+                    <div class="kit-qr">
+                        <img src="images/qr-recarga.png" alt="QR CoDi recarga $120" loading="lazy">
+                        <div class="kit-qr-info">
+                            <strong>📲 Paga con CoDi</strong>
+                            <span>Este código paga <b>1 recarga</b> ($120). ¿Quieres 2 o más? Escanéalo y paga <b>una vez por cada recarga</b>.</span>
+                            <a href="images/qr-recarga.png" download="QR-MataQK-recarga.png">⬇️ Descargar QR</a>
+                        </div>
+                    </div>
                     <div class="recarga-price">
                         $120 MXN <small>/ 5 + 2 bolsas</small>
                     </div>
@@ -915,6 +973,56 @@
                     <div class="envio-gratis">🚚 Envío gratis</div>
                     <button class="btn-kit" onclick="selectKit('recarga')">Pedir Recarga</button>
                 </div>
+            </div>
+
+            <!-- PAGO CON QR CODI -->
+            <div class="qr-seccion" id="pagar-qr">
+                <h3 class="qr-seccion-titulo">📲 Paga tu Kit con CoDi</h3>
+                <p class="qr-seccion-sub">Escanea el código del producto que quieres. Cada código paga <strong>un solo kit</strong>. Si quieres 2 o más, repite el pago con el mismo código <strong>una vez por cada kit</strong>.</p>
+
+                <ol class="qr-pasos">
+                    <li><strong>Abre la app de tu banco</strong> y entra a <strong>CoDi</strong> o <strong>Pagar con QR</strong>.</li>
+                    <li><strong>Escanea el código</strong> del kit que quieres y paga una vez por cada kit (2 kits = 2 pagos). Si estás viendo esta página en tu celular, toca <em>Descargar QR</em> y cárgalo desde tu galería en la app del banco.</li>
+                    <li><strong>Confirma el pago</strong> en tu app. Verás el monto y el concepto del kit.</li>
+                    <li><strong>Mándanos tu comprobante</strong> por WhatsApp o Telegram junto con tu <strong>nombre completo y domicilio</strong>. Entregamos en máximo 1 día hábil, con envío gratis dentro de la ciudad.</li>
+                </ol>
+
+                <div class="qr-grid">
+                <div class="qr-card">
+                    <h4>🏠 Kit Inicio</h4>
+                    <small>1 atomizador + 5 bolsas</small>
+                    <img src="images/qr-inicio.png" alt="Código QR CoDi para pagar Kit Inicio $168" loading="lazy">
+                    <div class="qr-card-precio">$168 MXN</div>
+                    <a href="images/qr-inicio.png" download="QR-MataQK-inicio.png" class="qr-descargar">⬇️ Descargar QR</a>
+                </div>
+                <div class="qr-card">
+                    <h4>👨‍👩‍👧 Kit Familiar</h4>
+                    <small>2 atomizadores + 10 bolsas</small>
+                    <img src="images/qr-familiar.png" alt="Código QR CoDi para pagar Kit Familiar $310" loading="lazy">
+                    <div class="qr-card-precio">$310 MXN</div>
+                    <a href="images/qr-familiar.png" download="QR-MataQK-familiar.png" class="qr-descargar">⬇️ Descargar QR</a>
+                </div>
+                <div class="qr-card">
+                    <h4>🏪 Kit Negocio</h4>
+                    <small>2 atomizadores + 15 bolsas</small>
+                    <img src="images/qr-negocio.png" alt="Código QR CoDi para pagar Kit Negocio $345" loading="lazy">
+                    <div class="qr-card-precio">$345 MXN</div>
+                    <a href="images/qr-negocio.png" download="QR-MataQK-negocio.png" class="qr-descargar">⬇️ Descargar QR</a>
+                </div>
+                <div class="qr-card">
+                    <h4>🔄 Recarga</h4>
+                    <small>5 bolsas + 2 GRATIS</small>
+                    <img src="images/qr-recarga.png" alt="Código QR CoDi para pagar Recarga $120" loading="lazy">
+                    <div class="qr-card-precio">$120 MXN</div>
+                    <a href="images/qr-recarga.png" download="QR-MataQK-recarga.png" class="qr-descargar">⬇️ Descargar QR</a>
+                </div>
+                </div>
+
+                <div class="qr-comprobante">
+                    <a href="https://wa.me/5219519231764?text=Hola!%20Ya%20pagu%C3%A9%20con%20CoDi.%20Te%20env%C3%ADo%20mi%20comprobante%2C%20nombre%20y%20domicilio." target="_blank" rel="noopener" class="btn-whatsapp-send">🧾 Enviar comprobante por WhatsApp</a>
+                    <a href="https://t.me/MataQKBot?start=pedido" target="_blank" rel="noopener" class="btn-telegram-send">✈️ Enviar comprobante por Telegram</a>
+                </div>
+                <p class="qr-seccion-nota">⚠️ El pago por código es por <strong>un paquete solamente</strong>. Si quieres dos paquetes o más, realiza la operación el número de veces que kits necesites y mándanos todos los comprobantes.</p>
             </div>
 
             <!-- Aviso de imágenes ilustrativas -->
@@ -1564,6 +1672,16 @@
             <div class="modal-sent" id="modalSent">✅ ¡Gracias! En cuanto recibamos tu mensaje te confirmamos y entregamos en máximo 1 día hábil.</div>
 
             <p id="modalMessage" style="font-size: 0.9rem;"></p>
+
+            <div class="qr-pago" id="qrBox" style="display: none;">
+                <p class="qr-titulo">📲 Paga con CoDi: <strong id="qrMonto"></strong></p>
+                <p class="qr-nota-pago" id="qrNota"></p>
+                <img id="qrImg" src="" alt="Código QR de pago CoDi">
+                <p class="qr-ayuda">Abre la app de tu banco → <strong>CoDi / Pagar con QR</strong> y escanéalo.
+                    Si estás en el mismo celular, descarga la imagen y cárgala desde tu galería.</p>
+                <a id="qrDescargar" href="#" download class="qr-descargar">⬇️ Descargar código QR</a>
+                <p class="qr-ayuda">Después de pagar, mándanos la foto de tu comprobante por WhatsApp o Telegram 🧾</p>
+            </div>
             <button class="btn-close-modal" onclick="closeModal()">Cerrar</button>
         </div>
     </div>
@@ -1580,11 +1698,12 @@
 
         // Productos y precios. Para cambiar un precio, cámbialo aquí
         // y también en el texto de la tarjeta y del <select>.
+        // qr: código CoDi de cobro por el precio de 1 pieza (si cambias el precio, genera un QR nuevo).
         const PRODUCTOS = {
-            inicio:   { nombre: 'Kit Inicio - 1 Atomizador + 5 Bolsas',      precio: 168 },
-            familiar: { nombre: 'Kit Familiar - 2 Atomizadores + 10 Bolsas', precio: 310 },
-            negocio:  { nombre: 'Kit Negocio - 2 Atomizadores + 15 Bolsas',  precio: 345 },
-            recarga:  { nombre: 'Recarga - 5 Bolsas + 2 GRATIS (promoción)',  precio: 120 }
+            inicio:   { nombre: 'Kit Inicio - 1 Atomizador + 5 Bolsas',      precio: 168, qr: 'images/qr-inicio.png' },
+            familiar: { nombre: 'Kit Familiar - 2 Atomizadores + 10 Bolsas', precio: 310, qr: 'images/qr-familiar.png' },
+            negocio:  { nombre: 'Kit Negocio - 2 Atomizadores + 15 Bolsas',  precio: 345, qr: 'images/qr-negocio.png' },
+            recarga:  { nombre: 'Recarga - 5 Bolsas + 2 GRATIS (promoción)',  precio: 120, qr: 'images/qr-recarga.png' }
         };
         // =========================================================
 
@@ -1673,7 +1792,22 @@
 
             // Mensaje según el método de pago
             const msg = document.getElementById('modalMessage');
-            if (data.metodoPago === 'Transferencia o depósito') {
+            const qrBox = document.getElementById('qrBox');
+            qrBox.style.display = 'none';
+            if (data.metodoPago === 'Transferencia o depósito' && producto.qr) {
+                // El QR cobra 1 kit; si pide varios, se paga una vez por cada kit
+                document.getElementById('qrImg').src = producto.qr;
+                document.getElementById('qrDescargar').href = producto.qr;
+                document.getElementById('qrDescargar').setAttribute('download', `QR-MataQK-${key}.png`);
+                document.getElementById('qrMonto').textContent = cantidad === 1
+                    ? `$${producto.precio} MXN`
+                    : `$${producto.precio} MXN × ${cantidad} pagos = $${data.total} MXN`;
+                document.getElementById('qrNota').innerHTML = cantidad === 1
+                    ? 'Este código paga <b>1 kit</b>.'
+                    : `Este código paga <b>1 kit</b>. Pediste ${cantidad}: realiza el pago <b>${cantidad} veces</b> con el mismo código.`;
+                qrBox.style.display = 'block';
+                msg.textContent = 'Primero envíanos tu pedido y luego paga con este código. Envío gratis dentro de la ciudad y entrega en máximo 1 día hábil.';
+            } else if (data.metodoPago === 'Transferencia o depósito') {
                 msg.textContent = `En breve te enviaremos un código QR o link para que realices tu pago de $${data.total} MXN. Envío gratis dentro de la ciudad y entrega en máximo 1 día hábil.`;
             } else {
                 msg.textContent = `Pagas $${data.total} MXN en efectivo al recibir tu pedido. Envío gratis dentro de la ciudad y entrega en máximo 1 día hábil.`;
@@ -1733,7 +1867,9 @@
             ];
 
             if (d.metodoPago === 'Transferencia o depósito') {
-                lineas.push('', `*Enviar QR o link de pago por $${d.total} MXN.*`);
+                lineas.push('', d.cantidad > 1
+                    ? `*Pago con QR CoDi: ${d.cantidad} pagos de $${d.precio} (el código paga 1 kit por operación).*`
+                    : `*Pago con QR CoDi: 1 pago de $${d.precio}.*`);
             }
 
             return lineas.join('\n');
