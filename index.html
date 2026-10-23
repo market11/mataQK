@@ -87,8 +87,9 @@
             color: var(--verde-claro); 
         }
 
-        nav ul { display: flex; list-style: none; gap: 2rem; }
-        nav a { color: var(--blanco); text-decoration: none; font-weight: 400; transition: color 0.3s; }
+        nav ul { display: flex; list-style: none; gap: 1.4rem; }
+        nav a { color: var(--blanco); text-decoration: none; font-weight: 400; transition: color 0.3s; white-space: nowrap; font-size: 0.95rem; }
+
         nav a:hover { color: var(--verde-claro); }
         .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
 
@@ -650,6 +651,31 @@
         .tg-hint { color: #888; font-size: 0.8rem; }
         .btn-close-modal { background: var(--azul-marino); color: white; border: none; padding: 0.8rem 2rem; border-radius: 10px; cursor: pointer; font-weight: 600; font-family: 'Poppins', sans-serif; }
 
+        /* BOTÓN FLOTANTE TELEGRAM (arriba del de WhatsApp) */
+        .telegram-float {
+            position: fixed;
+            bottom: 104px;
+            right: 30px;
+            height: 60px;
+            min-width: 60px;
+            background: #229ed9;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(34, 158, 217, 0.4);
+            z-index: 999;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0 18px 0 16px;
+        }
+        .telegram-float:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(34, 158, 217, 0.6); }
+        .telegram-float svg { width: 28px; height: 28px; fill: white; flex-shrink: 0; }
+
         /* BOTÓN FLOTANTE WHATSAPP */
         .whatsapp-float {
             position: fixed;
@@ -675,6 +701,22 @@
             width: 35px;
             height: 35px;
             fill: white;
+        }
+
+        /* Menú desplegable en pantallas medianas y celulares */
+        @media (max-width: 1150px) {
+            .menu-toggle { display: block; margin-left: auto; }
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%; left: 0;
+                width: 100%;
+                background: var(--azul-marino);
+                flex-direction: column;
+                padding: 1rem 2rem;
+                gap: 1rem;
+            }
+            nav ul.active { display: flex; }
         }
 
         /* RESPONSIVE */
@@ -728,6 +770,8 @@
             .nav-btn { padding: 0.7rem 1.2rem; font-size: 0.9rem; }
             
             .whatsapp-float { bottom: 20px; right: 20px; width: 55px; height: 55px; }
+            .telegram-float { bottom: 87px; right: 20px; height: 55px; min-width: 55px; padding: 0; }
+            .telegram-float span { display: none; }
             .modal { padding: 1.8rem 1.3rem; }
             
             .logo img { height: 40px; }
@@ -1148,18 +1192,6 @@
                     </div>
                 </div>
 
-                <!-- Espacio para la siguiente evidencia -->
-                <div class="evidencia-card">
-                    <div class="evidencia-placeholder">
-                        <div class="evidencia-placeholder-icon">📷</div>
-                        <p><strong>Próxima evidencia</strong></p>
-                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Envíanos tu foto y aparecerá aquí</p>
-                    </div>
-                    <div class="evidencia-info">
-                        <h3>¿Tienes una foto?</h3>
-                        <p>Comparte tu evidencia y gana una recarga gratis de Mata QK.</p>
-                    </div>
-                </div>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
@@ -1499,6 +1531,12 @@
         </div>
     </footer>
 
+    <!-- BOTÓN FLOTANTE TELEGRAM -->
+    <a href="https://t.me/+529519231764" id="telegramFloat" class="telegram-float" target="_blank" rel="noopener" title="Haz tu pedido por Telegram" aria-label="Haz tu pedido por Telegram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+        <span>Pedir por Telegram</span>
+    </a>
+
     <!-- BOTÓN FLOTANTE WHATSAPP -->
     <a href="https://wa.me/5219519231764?text=Hola!%20Me%20interesa%20Mata%20QK" class="whatsapp-float" target="_blank" rel="noopener" title="Chatea con nosotros" aria-label="Chatea con nosotros por WhatsApp">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -1549,6 +1587,11 @@
             recarga:  { nombre: 'Recarga - 5 Bolsas + 2 GRATIS (promoción)',  precio: 120 }
         };
         // =========================================================
+
+        // Botón flotante de Telegram: abre el bot si ya está configurado
+        if (TELEGRAM_BOT) {
+            document.getElementById('telegramFloat').href = `https://t.me/${TELEGRAM_BOT}?start=pedido`;
+        }
 
         // MENÚ MÓVIL
         function toggleMenu() {
