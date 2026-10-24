@@ -263,6 +263,21 @@
         .kit-qr-info strong { color: var(--azul-marino); font-size: 0.9rem; }
         .kit-qr-info a { color: var(--azul-marino); font-weight: 700; text-decoration: none; }
         .recarga-content .kit-qr { max-width: 380px; margin: 0 auto 1rem; }
+        .pago-subtitulo { text-align: center; color: var(--azul-marino); font-size: 1.2rem; margin: 1.5rem 0 0.3rem; }
+        .banco-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; max-width: 760px; margin: 0 auto; }
+        .banco-card { background: var(--blanco); border-radius: 14px; padding: 1rem 1.2rem; box-shadow: var(--sombra); text-align: left; }
+        .banco-card h4 { color: var(--azul-marino); font-size: 1rem; margin-bottom: 0.4rem; }
+        .banco-label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
+        .banco-dato { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; margin: 0.2rem 0 0.4rem; }
+        .banco-dato code { font-family: 'Poppins', monospace; font-size: 1.05rem; font-weight: 700; color: var(--azul-marino); letter-spacing: 0.5px; }
+        .banco-card small { color: #888; font-size: 0.78rem; }
+        .btn-copiar { background: var(--verde); color: white; border: none; border-radius: 8px; padding: 0.4rem 0.8rem; font-weight: 600; font-size: 0.85rem; cursor: pointer; font-family: 'Poppins', sans-serif; }
+        .btn-copiar:hover { background: var(--verde-claro); }
+        .banco-titular { text-align: center; font-size: 0.88rem; color: #555; margin: 0.9rem 0 0.5rem; }
+        .codi-aviso { max-width: 760px; margin: 0 auto 1.2rem; background: #fff3e0; border-left: 4px solid #ff9800; border-radius: 8px; padding: 0.8rem 1rem; font-size: 0.9rem; color: #555; }
+        .qr-pago .banco-grid { grid-template-columns: 1fr; }
+        .qr-pago .banco-card { box-shadow: none; border: 1px solid var(--gris); }
+        .qr-pago .banco-titular { font-size: 0.8rem; }
         .qr-seccion-nota { text-align: center; color: #777; font-size: 0.85rem; margin-top: 1rem; }
         .aviso-diseno {
             display: flex;
@@ -871,7 +886,8 @@
                             <img src="images/qr-inicio.png" alt="QR CoDi kit $168" loading="lazy">
                             <div class="kit-qr-info">
                                 <strong>📲 Paga con CoDi</strong>
-                                <span>Este código paga <b>1 kit</b> ($168). ¿Quieres 2 o más? Escanéalo y paga <b>una vez por cada kit</b>.</span>
+                                <span>Este código paga <b>1 kit</b> ($168). ¿Quieres 2 o más? Paga <b>una vez por cada kit</b>. Escanéalo desde <b>CoDi en la app de tu banco</b>, no con la cámara.</span>
+                                <a href="#pagar-qr">💳 ¿Sin CoDi? Ver CLABE y tarjeta</a>
                                 <a href="images/qr-inicio.png" download="QR-MataQK-inicio.png">⬇️ Descargar QR</a>
                             </div>
                         </div>
@@ -900,7 +916,8 @@
                             <img src="images/qr-familiar.png" alt="QR CoDi kit $310" loading="lazy">
                             <div class="kit-qr-info">
                                 <strong>📲 Paga con CoDi</strong>
-                                <span>Este código paga <b>1 kit</b> ($310). ¿Quieres 2 o más? Escanéalo y paga <b>una vez por cada kit</b>.</span>
+                                <span>Este código paga <b>1 kit</b> ($310). ¿Quieres 2 o más? Paga <b>una vez por cada kit</b>. Escanéalo desde <b>CoDi en la app de tu banco</b>, no con la cámara.</span>
+                                <a href="#pagar-qr">💳 ¿Sin CoDi? Ver CLABE y tarjeta</a>
                                 <a href="images/qr-familiar.png" download="QR-MataQK-familiar.png">⬇️ Descargar QR</a>
                             </div>
                         </div>
@@ -934,7 +951,8 @@
                             <img src="images/qr-negocio.png" alt="QR CoDi kit $345" loading="lazy">
                             <div class="kit-qr-info">
                                 <strong>📲 Paga con CoDi</strong>
-                                <span>Este código paga <b>1 kit</b> ($345). ¿Quieres 2 o más? Escanéalo y paga <b>una vez por cada kit</b>.</span>
+                                <span>Este código paga <b>1 kit</b> ($345). ¿Quieres 2 o más? Paga <b>una vez por cada kit</b>. Escanéalo desde <b>CoDi en la app de tu banco</b>, no con la cámara.</span>
+                                <a href="#pagar-qr">💳 ¿Sin CoDi? Ver CLABE y tarjeta</a>
                                 <a href="images/qr-negocio.png" download="QR-MataQK-negocio.png">⬇️ Descargar QR</a>
                             </div>
                         </div>
@@ -962,7 +980,8 @@
                         <img src="images/qr-recarga.png" alt="QR CoDi recarga $120" loading="lazy">
                         <div class="kit-qr-info">
                             <strong>📲 Paga con CoDi</strong>
-                            <span>Este código paga <b>1 recarga</b> ($120). ¿Quieres 2 o más? Escanéalo y paga <b>una vez por cada recarga</b>.</span>
+                            <span>Este código paga <b>1 recarga</b> ($120). ¿Quieres 2 o más? Paga <b>una vez por cada recarga</b>. Escanéalo desde <b>CoDi en la app de tu banco</b>, no con la cámara.</span>
+                            <a href="#pagar-qr">💳 ¿Sin CoDi? Ver CLABE y tarjeta</a>
                             <a href="images/qr-recarga.png" download="QR-MataQK-recarga.png">⬇️ Descargar QR</a>
                         </div>
                     </div>
@@ -977,14 +996,39 @@
 
             <!-- PAGO CON QR CODI -->
             <div class="qr-seccion" id="pagar-qr">
-                <h3 class="qr-seccion-titulo">📲 Paga tu Kit con CoDi</h3>
-                <p class="qr-seccion-sub">Escanea el código del producto que quieres. Cada código paga <strong>un solo kit</strong>. Si quieres 2 o más, repite el pago con el mismo código <strong>una vez por cada kit</strong>.</p>
+                <h3 class="qr-seccion-titulo">💳 Formas de Pago</h3>
+                <p class="qr-seccion-sub">Elige la que te quede más fácil. También puedes pagar en <strong>efectivo contra entrega</strong>.</p>
+
+                <h4 class="pago-subtitulo">1. Transferencia o depósito</h4>
+                <p class="qr-seccion-sub">Transfiere o deposita el total de tu pedido (precio del kit × número de kits).</p>
+                <div class="banco-grid">
+                    <div class="banco-card">
+                        <h4>🏦 Transferencia (SPEI)</h4>
+                        <span class="banco-label">CLABE</span>
+                        <div class="banco-dato"><code>0146 1056 6580 3976 16</code>
+                            <button type="button" class="btn-copiar" data-copy="014610566580397616">📋 Copiar</button></div>
+                        <small>Desde la app de cualquier banco.</small>
+                    </div>
+                    <div class="banco-card">
+                        <h4>🏪 Depósito en OXXO o ventanilla</h4>
+                        <span class="banco-label">Número de tarjeta</span>
+                        <div class="banco-dato"><code>5579 1004 7282 7797</code>
+                            <button type="button" class="btn-copiar" data-copy="5579100472827797">📋 Copiar</button></div>
+                        <small>En OXXO puede haber una comisión por depósito.</small>
+                    </div>
+                </div>
+                <p class="banco-titular">Banco: <strong>Santander</strong> · Titular: <strong>José Emmanuel Chan Ibáñez</strong> · Concepto: <strong>tu nombre y el kit</strong></p>
+
+                <h4 class="pago-subtitulo">2. Pago con CoDi (código QR)</h4>
+                <p class="qr-seccion-sub">Cada código paga <strong>un solo kit</strong>. Si quieres 2 o más, repite el pago con el mismo código <strong>una vez por cada kit</strong>.</p>
+                <div class="codi-aviso">⚠️ <strong>El código CoDi no se abre con la cámara del celular</strong> ni es un link: solo funciona desde la opción <strong>CoDi</strong> dentro de la app de tu banco. Si tu banco no tiene CoDi, usa la transferencia o el depósito.</div>
 
                 <ol class="qr-pasos">
-                    <li><strong>Abre la app de tu banco</strong> y entra a <strong>CoDi</strong> o <strong>Pagar con QR</strong>.</li>
-                    <li><strong>Escanea el código</strong> del kit que quieres y paga una vez por cada kit (2 kits = 2 pagos). Si estás viendo esta página en tu celular, toca <em>Descargar QR</em> y cárgalo desde tu galería en la app del banco.</li>
-                    <li><strong>Confirma el pago</strong> en tu app. Verás el monto y el concepto del kit.</li>
-                    <li><strong>Mándanos tu comprobante</strong> por WhatsApp o Telegram junto con tu <strong>nombre completo y domicilio</strong>. Entregamos en máximo 1 día hábil, con envío gratis dentro de la ciudad.</li>
+                    <li><strong>Abre la app de tu banco</strong> (Santander, BBVA, Banorte, Banamex, etc.) e inicia sesión.</li>
+                    <li>Busca la opción <strong>CoDi</strong> (en algunos bancos está en <em>Transferir</em> o <em>Pagar</em>) y elige <strong>Pagar con QR</strong> o <strong>Escanear</strong>.</li>
+                    <li><strong>Escanea el código</strong> del kit que quieres desde otra pantalla. Si estás viendo esta página en tu celular, toca <em>Descargar QR</em> y, dentro de CoDi, elige <strong>cargar imagen / galería</strong>.</li>
+                    <li>La app te muestra el <strong>monto y el concepto</strong> del kit. Confirma el pago (repítelo una vez por cada kit).</li>
+                    <li><strong>Mándanos tu comprobante</strong> por WhatsApp o Telegram con tu <strong>nombre completo y domicilio</strong>. Entregamos en máximo 1 día hábil, con envío gratis dentro de la ciudad.</li>
                 </ol>
 
                 <div class="qr-grid">
@@ -1023,6 +1067,7 @@
                     <a href="https://t.me/MataQKBot?start=pedido" target="_blank" rel="noopener" class="btn-telegram-send">✈️ Enviar comprobante por Telegram</a>
                 </div>
                 <p class="qr-seccion-nota">⚠️ El pago por código es por <strong>un paquete solamente</strong>. Si quieres dos paquetes o más, realiza la operación el número de veces que kits necesites y mándanos todos los comprobantes.</p>
+                
             </div>
 
             <!-- Aviso de imágenes ilustrativas -->
@@ -1033,71 +1078,10 @@
         </div>
     </section>
 
-    <!-- BENEFICIOS: RENDIMIENTO Y SEGURIDAD -->
+    <!-- BENEFICIOS: SEGURIDAD -->
     <section id="beneficios" class="beneficios-section">
         <div class="container">
-            <h2 class="section-title">💪 Rinde el Doble, Cuesta Menos</h2>
-            <p class="section-subtitle">Con <strong>medio sobre</strong> preparas <strong>1 litro</strong>, y cada litro rinde de <strong>500 a 1,000 gatillazos</strong>.</p>
-
-            <div class="rinde-destacado">
-                <div class="rinde-item"><span class="rinde-num">½</span><span class="rinde-txt">sobre por litro de agua</span></div>
-                <div class="rinde-flecha">→</div>
-                <div class="rinde-item"><span class="rinde-num">1 L</span><span class="rinde-txt">de producto listo para usar</span></div>
-                <div class="rinde-flecha">→</div>
-                <div class="rinde-item"><span class="rinde-num">500–1,000</span><span class="rinde-txt">gatillazos por litro</span></div>
-            </div>
-
-            <div class="tabla-wrap">
-                <table class="tabla-rinde">
-                    <thead>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Precio</th>
-                            <th>Litros que rinde</th>
-                            <th>Gatillazos</th>
-                            <th>Costo por litro</th>
-                            <th>Te ahorras</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="Producto"><strong>Kit Inicio</strong><small>1 atomizador + 5 bolsas</small></td>
-                            <td data-label="Precio">$168</td>
-                            <td data-label="Litros que rinde">10 L</td>
-                            <td data-label="Gatillazos">5,000 – 10,000</td>
-                            <td data-label="Costo por litro">$16.80</td>
-                            <td data-label="Te ahorras">—</td>
-                        </tr>
-                        <tr class="fila-popular">
-                            <td data-label="Producto"><strong>Kit Familiar</strong><small>2 atomizadores + 10 bolsas</small></td>
-                            <td data-label="Precio">$310</td>
-                            <td data-label="Litros que rinde">20 L</td>
-                            <td data-label="Gatillazos">10,000 – 20,000</td>
-                            <td data-label="Costo por litro">$15.50</td>
-                            <td data-label="Te ahorras" class="ahorro">$26</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Producto"><strong>Kit Negocio</strong><small>2 atomizadores + 15 bolsas</small></td>
-                            <td data-label="Precio">$345</td>
-                            <td data-label="Litros que rinde">30 L</td>
-                            <td data-label="Gatillazos">15,000 – 30,000</td>
-                            <td data-label="Costo por litro">$11.50</td>
-                            <td data-label="Te ahorras" class="ahorro">$111</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Producto"><strong>Recarga (promoción)</strong><small>5 bolsas + 2 gratis</small></td>
-                            <td data-label="Precio">$120</td>
-                            <td data-label="Litros que rinde">14 L</td>
-                            <td data-label="Gatillazos">7,000 – 14,000</td>
-                            <td data-label="Costo por litro">$8.57</td>
-                            <td data-label="Te ahorras" class="ahorro">$48</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="tabla-nota">"Te ahorras" compara con comprar lo mismo por separado: atomizador $48 y bolsa $24. En la recarga, el ahorro son las 2 bolsas de regalo. Cada gatillazo te cuesta entre 1 y 3 centavos.</p>
-
-            <h2 class="section-title" style="margin-top: 4rem;">🏡 Seguro para tu Hogar</h2>
+            <h2 class="section-title">🏡 Seguro para tu Hogar</h2>
             <p class="section-subtitle">Elimina cucarachas sin complicarte la vida</p>
 
             <div class="seguro-grid">
@@ -1550,7 +1534,7 @@
                     <select id="paymentMethod" required>
                         <option value="">-- Selecciona método de pago --</option>
                         <option value="Efectivo contra entrega">💵 Efectivo contra entrega</option>
-                        <option value="Transferencia o depósito">🏦 Transferencia o depósito (te enviamos QR o link)</option>
+                        <option value="Transferencia o depósito">🏦 Transferencia, depósito o CoDi</option>
                     </select>
                 </div>
 
@@ -1598,7 +1582,8 @@
                     <p>Pedidos únicamente por WhatsApp o Telegram · Formas de pago:</p>
                     <div class="payment-icons">
                         <span class="payment-icon">💵 Efectivo contra entrega</span>
-                        <span class="payment-icon">🏦 Transferencia o depósito</span>
+                        <span class="payment-icon">🏦 Transferencia / depósito</span>
+                        <span class="payment-icon">📲 CoDi</span>
                     </div>
                 </div>
             </form>
@@ -1673,12 +1658,33 @@
 
             <p id="modalMessage" style="font-size: 0.9rem;"></p>
 
+            <div class="qr-pago" id="bancoBox" style="display: none;">
+                <p class="qr-titulo">🏦 Transferencia o depósito: <strong id="bancoMonto"></strong></p>
+                <div class="banco-grid">
+                    <div class="banco-card">
+                        <h4>🏦 Transferencia (SPEI)</h4>
+                        <span class="banco-label">CLABE</span>
+                        <div class="banco-dato"><code>0146 1056 6580 3976 16</code>
+                            <button type="button" class="btn-copiar" data-copy="014610566580397616">📋 Copiar</button></div>
+                        <small>Desde la app de cualquier banco.</small>
+                    </div>
+                    <div class="banco-card">
+                        <h4>🏪 Depósito en OXXO o ventanilla</h4>
+                        <span class="banco-label">Número de tarjeta</span>
+                        <div class="banco-dato"><code>5579 1004 7282 7797</code>
+                            <button type="button" class="btn-copiar" data-copy="5579100472827797">📋 Copiar</button></div>
+                        <small>En OXXO puede haber una comisión por depósito.</small>
+                    </div>
+                </div>
+                <p class="banco-titular">Banco: <strong>Santander</strong> · Titular: <strong>José Emmanuel Chan Ibáñez</strong> · Concepto: <strong>tu nombre y el kit</strong></p>
+            </div>
+
             <div class="qr-pago" id="qrBox" style="display: none;">
-                <p class="qr-titulo">📲 Paga con CoDi: <strong id="qrMonto"></strong></p>
+                <p class="qr-titulo">📲 O paga con CoDi: <strong id="qrMonto"></strong></p>
                 <p class="qr-nota-pago" id="qrNota"></p>
                 <img id="qrImg" src="" alt="Código QR de pago CoDi">
-                <p class="qr-ayuda">Abre la app de tu banco → <strong>CoDi / Pagar con QR</strong> y escanéalo.
-                    Si estás en el mismo celular, descarga la imagen y cárgala desde tu galería.</p>
+                <p class="qr-ayuda">⚠️ No se abre con la cámara: entra a la app de tu banco → <strong>CoDi → Pagar con QR</strong> y escanéalo.
+                    Si estás en el mismo celular, descarga la imagen y cárgala desde la galería dentro de CoDi.</p>
                 <a id="qrDescargar" href="#" download class="qr-descargar">⬇️ Descargar código QR</a>
                 <p class="qr-ayuda">Después de pagar, mándanos la foto de tu comprobante por WhatsApp o Telegram 🧾</p>
             </div>
@@ -1711,6 +1717,31 @@
         if (TELEGRAM_BOT) {
             document.getElementById('telegramFloat').href = `https://t.me/${TELEGRAM_BOT}?start=pedido`;
         }
+
+        // Botones "Copiar" de CLABE y tarjeta
+        function copiarTexto(texto) {
+            if (navigator.clipboard && window.isSecureContext) {
+                return navigator.clipboard.writeText(texto).catch(() => copiarRespaldo(texto));
+            }
+            return copiarRespaldo(texto);
+        }
+        function copiarRespaldo(texto) {
+            const t = document.createElement('textarea');
+            t.value = texto; t.style.position = 'fixed'; t.style.opacity = '0';
+            document.body.appendChild(t); t.select();
+            try { document.execCommand('copy'); } catch (e) {}
+            document.body.removeChild(t);
+            return Promise.resolve();
+        }
+        document.addEventListener('click', function (e) {
+            const b = e.target.closest('.btn-copiar');
+            if (!b) return;
+            copiarTexto(b.dataset.copy).then(() => {
+                const original = b.textContent;
+                b.textContent = '✅ Copiado';
+                setTimeout(() => { b.textContent = original; }, 1800);
+            }).catch(() => {});
+        });
 
         // MENÚ MÓVIL
         function toggleMenu() {
@@ -1793,7 +1824,13 @@
             // Mensaje según el método de pago
             const msg = document.getElementById('modalMessage');
             const qrBox = document.getElementById('qrBox');
+            const bancoBox = document.getElementById('bancoBox');
             qrBox.style.display = 'none';
+            bancoBox.style.display = 'none';
+            if (data.metodoPago === 'Transferencia o depósito') {
+                document.getElementById('bancoMonto').textContent = `$${data.total} MXN`;
+                bancoBox.style.display = 'block';
+            }
             if (data.metodoPago === 'Transferencia o depósito' && producto.qr) {
                 // El QR cobra 1 kit; si pide varios, se paga una vez por cada kit
                 document.getElementById('qrImg').src = producto.qr;
@@ -1806,7 +1843,7 @@
                     ? 'Este código paga <b>1 kit</b>.'
                     : `Este código paga <b>1 kit</b>. Pediste ${cantidad}: realiza el pago <b>${cantidad} veces</b> con el mismo código.`;
                 qrBox.style.display = 'block';
-                msg.textContent = 'Primero envíanos tu pedido y luego paga con este código. Envío gratis dentro de la ciudad y entrega en máximo 1 día hábil.';
+                msg.textContent = 'Primero envíanos tu pedido y luego paga por transferencia, depósito o CoDi. Envío gratis dentro de la ciudad y entrega en máximo 1 día hábil.';
             } else if (data.metodoPago === 'Transferencia o depósito') {
                 msg.textContent = `En breve te enviaremos un código QR o link para que realices tu pago de $${data.total} MXN. Envío gratis dentro de la ciudad y entrega en máximo 1 día hábil.`;
             } else {
@@ -1867,9 +1904,7 @@
             ];
 
             if (d.metodoPago === 'Transferencia o depósito') {
-                lineas.push('', d.cantidad > 1
-                    ? `*Pago con QR CoDi: ${d.cantidad} pagos de $${d.precio} (el código paga 1 kit por operación).*`
-                    : `*Pago con QR CoDi: 1 pago de $${d.precio}.*`);
+                lineas.push('', `*Pago por transferencia/depósito: $${d.total} MXN* (o con CoDi: ${d.cantidad} pago(s) de $${d.precio}).`);
             }
 
             return lineas.join('\n');
