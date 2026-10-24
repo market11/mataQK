@@ -871,15 +871,15 @@
                 <!-- Kit 1: Inicio -->
                 <div class="kit-card">
                     <div class="kit-image">
-                        <img src="images/kit-1-inicio.jpg" alt="Kit Inicio Mata QK - 1 atomizador + 5 bolsas de concentrado">
+                        <img src="images/kit-1-inicio.jpg" alt="Kit Inicio Mata QK - 1 atomizador de 500 ml + 5 bolsas de concentrado">
                     </div>
                     <div class="kit-content">
                         <div class="kit-name">🏠 Kit Inicio</div>
                         <div class="kit-desc">Ideal para departamentos y problemas puntuales</div>
                         <ul class="kit-includes">
-                            <li>1 Atomizador 1L premium</li>
+                            <li>1 Atomizador 500 ml premium</li>
                             <li>5 Bolsas de concentrado Mata QK</li>
-                            <li>Rinde 10 litros (½ bolsa por litro)</li>
+                            <li>Rinde 10 litros (¼ de bolsa por cada llenado de 500 ml)</li>
                             <li>Guía de aplicación impresa</li>
                         </ul>
                         <div class="kit-qr">
@@ -1034,7 +1034,7 @@
                 <div class="qr-grid">
                 <div class="qr-card">
                     <h4>🏠 Kit Inicio</h4>
-                    <small>1 atomizador + 5 bolsas</small>
+                    <small>1 atomizador 500 ml + 5 bolsas</small>
                     <img src="images/qr-inicio.png" alt="Código QR CoDi para pagar Kit Inicio $168" loading="lazy">
                     <div class="qr-card-precio">$168 MXN</div>
                     <a href="images/qr-inicio.png" download="QR-MataQK-inicio.png" class="qr-descargar">⬇️ Descargar QR</a>
@@ -1134,7 +1134,7 @@
                 <div class="step">
                     <div class="step-number">4</div>
                     <h3>Mezcla y Aplica</h3>
-                    <p>Vierte ½ bolsa en el atomizador, completa con agua hasta 1 litro, agita y rocía. ¡Listo!</p>
+                    <p>Vierte ½ bolsa en el atomizador de 1 litro (o ¼ de bolsa en el de 500 ml), completa con agua, agita y rocía. ¡Listo!</p>
                 </div>
             </div>
         </div>
@@ -1346,7 +1346,7 @@
                         <div class="step-info">
                             <span class="step-number-badge">Paso 2</span>
                             <h3>Abre la bolsa de concentrado</h3>
-                            <p>Corta con cuidado una bolsita de concentrado Mata QK por la esquina superior. Vierte <strong>la mitad del contenido</strong> dentro del atomizador vacío; con medio sobre preparas 1 litro. Guarda la otra mitad bien cerrada para tu siguiente preparación.</p>
+                            <p>Corta con cuidado una bolsita de concentrado Mata QK por la esquina superior. Vierte <strong>la mitad del contenido</strong> dentro del atomizador vacío; con medio sobre preparas 1 litro. Si tu atomizador es de 500 ml (Kit Inicio), usa solo <strong>una cuarta parte</strong> del sobre. Guarda el resto bien cerrado para tu siguiente preparación.</p>
                             <div class="step-tip">
                                 ⚠️ <strong>Precaución:</strong> Evita el contacto directo con la piel. Usa guantes si eres sensible.
                             </div>
@@ -1364,7 +1364,7 @@
                         <div class="step-info">
                             <span class="step-number-badge">Paso 3</span>
                             <h3>Agrega agua limpia</h3>
-                            <p>Llena el atomizador con agua limpia (preferiblemente sin cloro) hasta completar su capacidad de 1 litro. El agua ayuda a activar y distribuir la fórmula.</p>
+                            <p>Llena el atomizador con agua limpia (preferiblemente sin cloro) hasta completar su capacidad (1 litro, o 500 ml en el Kit Inicio). El agua ayuda a activar y distribuir la fórmula.</p>
                             <div class="step-tip">
                                 💡 <strong>Tip:</strong> Usa agua tibia para una mejor disolución del concentrado.
                             </div>
@@ -1455,7 +1455,7 @@
                     <label for="selectedProduct">Producto Seleccionado <span class="required">*</span></label>
                     <select id="selectedProduct" required onchange="updateSummary()">
                         <option value="">-- Selecciona un kit --</option>
-                        <option value="inicio">Kit Inicio - 1 Atomizador + 5 Bolsas ($168)</option>
+                        <option value="inicio">Kit Inicio - 1 Atomizador 500 ml + 5 Bolsas ($168)</option>
                         <option value="familiar">Kit Familiar - 2 Atomizadores + 10 Bolsas ($310)</option>
                         <option value="negocio">Kit Negocio - 2 Atomizadores + 15 Bolsas ($345)</option>
                         <option value="recarga">Recarga - 5 Bolsas + 2 GRATIS ($120)</option>
@@ -1706,7 +1706,7 @@
         // y también en el texto de la tarjeta y del <select>.
         // qr: código CoDi de cobro por el precio de 1 pieza (si cambias el precio, genera un QR nuevo).
         const PRODUCTOS = {
-            inicio:   { nombre: 'Kit Inicio - 1 Atomizador + 5 Bolsas',      precio: 168, qr: 'images/qr-inicio.png' },
+            inicio:   { nombre: 'Kit Inicio - 1 Atomizador 500 ml + 5 Bolsas', precio: 168, qr: 'images/qr-inicio.png' },
             familiar: { nombre: 'Kit Familiar - 2 Atomizadores + 10 Bolsas', precio: 310, qr: 'images/qr-familiar.png' },
             negocio:  { nombre: 'Kit Negocio - 2 Atomizadores + 15 Bolsas',  precio: 345, qr: 'images/qr-negocio.png' },
             recarga:  { nombre: 'Recarga - 5 Bolsas + 2 GRATIS (promoción)',  precio: 120, qr: 'images/qr-recarga.png' }
